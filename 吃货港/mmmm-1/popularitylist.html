@@ -1,0 +1,227 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>人气榜单</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=0.48, minimum-scale=0.48, maximum-scale=2.0, user-scalable=yes" /> 
+
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="format-detection" content="telephone=no" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 引入   bootstrapcss  引入公共css --> 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+<link href="./css/common.css" rel="stylesheet" type="text/css"> 
+<!-- 引入图标 css  wkadd  -->
+<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+<!-- 引入  jquery bootstrap  js --> 
+<script src="./js/gpsPostion.js"></script>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- 引入  vuejs  -->
+<script type="text/javascript" src="./js/vue.js"></script>
+
+<style>
+    /* 附近精选首页重合部分开始  */
+	.chg-index-main{margin:18px auto;width:750px;  background:#fff;}
+	.chg-index-main-list{margin-top:10px; width:750px; height:210px; border-bottom:1px solid #e1e1e1;}
+.chg-index-main-list-img{margin-top:18px;margin-left:36px;width;173px; height:173px; border-radius:5px;}
+.chg-index-main-list-main ul{margin-top:18px;margin-left:36px;width;173px; height:173px; }
+.chg-index-main-list-main li{margin-top:20px;width;173px; height:27px; }
+.chg-index-main-list-main-title{font-size:32px; color:black;}
+.chg-index-main-list-main-title-size{font-size:28px; }
+.chg-index-main-list-main-title-color{font-size:28px; color:#ec5d50;}
+.chg-index-main-list-moods{margin-top:20px;font-size:24px; width:140px; height:27px; text-align:left;}
+.chg-index-main-list-moods span{color:#f9b61a;}
+.chg-selectedlist-box{margin:0 auto;width:750px; background:#f2f2f2;}
+.chg-selectedlist-box-header{width:750px; height:88px;background:#db6655;line-height:88px; }
+
+    /* 附近精选重合部分结束  */
+    /* 增加更多菜品CSS部分开始  */
+.chg-popularitylist-header-callback{margin-left:30px;width:360px; height:85px; line-height:85px; font-size:26px; text-align:left; color:#fff;}
+.chg-popularitylist-header{ margin:0 auto; width:750px; height:90px;}
+.chg-popularitylist-header ul{width:750px; height:90px;}
+.chg-popularitylist-header li{float:left; width:187px; height:90px; line-height:90px; text-align:center; font-size:28px; color:#333333;}
+.chg-popularitylist-img{margin:0 auto;width:750px; height:299px;}
+.chg-popularitylist-img img{width:750px; height:299px;}
+.chg-popularitylist-main-list-main ul{margin-top:-30px;}
+.chg-popularitylist-main-list-moods{margin-top:-20px;}
+	/* 增加更多菜品CSS部分结束  */	 
+</style>
+
+
+</head>
+<body>
+           
+  <!--   美食港榜单开始 -->
+   <div class="chg-selectedlist-box">
+      <div class="chg-selectedlist-box-header">
+		<div class="chg-recomgoodslist-box-header-title">
+			<div class="chg-popularitylist-header-callback fl">
+				 <a onClick="javascript :history.back(-1);"><i class="iconfontback icon-back"></i>
+				 </a>
+				人气榜单			 
+		    </div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="chg-popularitylist-header">
+		  <ul>
+		   <li>附近</li><li>品类</li><li>智能排序</li><li>筛选</li>
+		  </ul>
+		</div>
+		<div class="chg-popularitylist-img">
+		  <img src="./img/renqi.jpg" alt=""/>
+		</div>
+		<div class="chg-index-main">
+		<!-- 循环体开始-->					
+					<div class="chg-index-main-list">
+					    <div class="chg-index-main-list-img fl">
+					      <a href="./shopdetail.html"><img src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main chg-popularitylist-main-list-main  fl">
+					      <ul class="chg-popularitylist-add">
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods chg-popularitylist-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+					 </div>
+					 <!-- 循环体结束-->
+					 
+					 <!-- 循环体开始-->					
+					<div class="chg-index-main-list">
+					    <div class="chg-index-main-list-img fl">
+					      <a href="./shopdetail.html"><img src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main chg-popularitylist-main-list-main  fl">
+					      <ul class="chg-popularitylist-add">
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods chg-popularitylist-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+					 </div>
+					 <!-- 循环体结束-->
+					 
+					 <!-- 循环体开始-->					
+					<div class="chg-index-main-list">
+					    <div class="chg-index-main-list-img fl">
+					      <a href="./shopdetail.html"><img src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main chg-popularitylist-main-list-main  fl">
+					      <ul class="chg-popularitylist-add">
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods chg-popularitylist-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+					 </div>
+					 <!-- 循环体结束-->
+					 
+					 <!-- 循环体开始-->					
+					<div class="chg-index-main-list">
+					    <div class="chg-index-main-list-img fl">
+					      <a href="./shopdetail.html"><img src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main chg-popularitylist-main-list-main  fl">
+					      <ul class="chg-popularitylist-add">
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods chg-popularitylist-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+					 </div>
+					 <!-- 循环体结束-->
+					 <!-- 循环体开始-->					
+					<div class="chg-index-main-list">
+					    <div class="chg-index-main-list-img fl">
+					      <a href="./shopdetail.html"><img src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main chg-popularitylist-main-list-main  fl">
+					      <ul class="chg-popularitylist-add">
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods chg-popularitylist-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+					 </div>
+					 <!-- 循环体结束-->
+	    </div>
+	  </div>
+   
+	
+		
+		
+   </div>
+ 
+  <!--   美食港榜单结束  -->
+
+
+<!--   惰性加载JS    -->
+   <script src="./js/img.js"></script>
+    <script>
+        SI.img({
+            fadeIn: function() {
+                this.style.opacity = 1;
+            }
+        })
+    </script>
+	<!-- 手机自适应开始  -->
+	<script>
+     var phoneWidth = parseInt(window.screen.width);
+     var phoneHeight = parseInt(window.screen.height);
+     var phoneScale = phoneWidth/750;//除以的值按手机的物理分辨率
+    var ua = navigator.userAgent;
+     if (/Android (\d+\.\d+)/.test(ua)) {
+         var version = parseFloat(RegExp.$1);
+          // andriod 2.3
+          if (version > 2.3) {
+		 
+		  document.write('<meta name="viewport" content="width=device-width,initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale='+phoneScale+',user-scalable=no">');
+             // andriod 2.3以上
+             
+         } else {
+		
+             document.write('<meta name="viewport" content="width=device-width,user-scalable=no">');
+         }
+         // 其他系统
+     } else {
+	
+         document.write('<meta name="viewport" content="width=device-width, initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale ='+phoneScale +',user-scalable=no,">');
+     }
+ </script>
+ <!-- 手机自适应结束  -->
+	
+	
+
+   
+ 
+</body>
+
+</html>
+
+

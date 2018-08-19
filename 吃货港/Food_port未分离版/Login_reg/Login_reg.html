@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>登录注册界面</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../dist/bootstrap.min.css"/>
+    <style>
+        body {
+            background: url("images/login_bg3.png") no-repeat;
+            font-family: "微软雅黑";
+            background-size: 100% auto;
+            color: #555;
+        }
+
+        .wrap1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .main {
+            background: #f2f2f2;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            float: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px #d1d1d1;
+            margin-top: 8%;
+        }
+
+        .login_top {
+        }
+
+        .login_top span {
+            display: inline-block;
+            text-align: center;
+            width: 49%;
+            height: 48px;
+            line-height: 49px;
+            font-size: 24px;
+            background: #fbfbfb;
+            border-radius: 8px 8px 0 0;
+            border-shadow: 2px 2px 2px #d1d1d1;
+            cursor: pointer;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        label {
+            color: #7e7e7e;
+        }
+
+        .rember {
+            padding-left: 11px;
+        }
+
+        .login_input {
+            background: #e5e3e3;
+            border: none;
+            line-height: 50px;
+            border-radius: 15px;
+            width: 100%;
+            outline-style: none;
+            padding: 2px 2px 2px 20px;
+            font-size: 18px;
+        }
+
+        .form-group span {
+            display: inline-block;
+            font-size: 16px;
+            width: 45%;
+            text-align: right;
+            line-height: 50px;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        .form-group p {
+            font-size: 22px;
+            padding: 0 18px;
+        }
+
+        .login_btn {
+            padding: 15px 60px;
+            background: #f66867;
+            border: none;
+            color: #fff;
+            border-radius: 9px;
+            outline-style: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 200px) {
+            .pd-xs-20 {
+                padding: 20px 20px 20px 20px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .pd-sm-50 {
+                padding: 20px 50px 24px;
+            }
+        }
+
+        /*.hrLine{ vertical-align:middle; display:inline-block;padding:0; }*/
+        .footer {
+            position: absolute;
+            width: 100%;
+            z-index: 11;
+            bottom: 0;
+            height: 137px;
+        }
+
+        .login_content {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+        .login_content div {
+            font: 400 18px Helvetica, Arial, sans-serif;
+            line-height: 20px;
+        }
+
+        .login_content div:after, .login_content div:before {
+            background: #fff;
+            content: "";
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            width: 40%;
+        }
+
+        .login_content div:before {
+            left: 0;
+        }
+
+        .login_content div:after {
+            right: 0;
+        }
+
+        .footer p {
+            position: absolute;
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer .img {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .footer .ggh {
+            margin-top: 80px;
+            font-size: 23px;
+            color: #dff6fe;
+        }
+
+        .main .active {
+            background: #f2f2f2;
+            border-top: 2px solid #e0dada;
+        }
+
+        .logo2 {
+            position: absolute;
+            left: 10px;
+            top: 17px;
+        }
+
+        .logo2 span {
+            font-size: 24px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid logo2">
+    <img src="images/logo2.png" alt=""/>&nbsp;
+    <span>美食港云端共享系统</span>
+</div>
+<div class="container wrap1">
+    <div class="main col-sm-8 col-md-5">
+        <div class="login_top row">
+            <span class="fl top-login ">登录</span>
+            <span class="fr top-reg active">注册</span>
+        </div>
+        <div class="content1 pd-xs-20 pd-sm-50" style="display:none;">
+            <div class="form-group">
+                <p>账户：</p>
+                <input type="text" class="login_input" name="username" id="username" placeholder="请输入手机号"/>
+            </div>
+            <div class="form-group">
+                <p>密码：</p>
+                <input type="password" class="login_input" name="password" id="password" placeholder="请输入密码"/>
+            </div>
+            <div class="checkbox rember">
+                <label>
+                    <input type="checkbox"/>记住我的登录信息
+                </label>
+                <a href="forget.html" style="float:right;color:#7e7e7e;">忘记密码？</a>
+            </div>
+            <button type="button" class="login_btn" id="login">马上登录</button>
+        </div>
+        <div class="content2 pd-xs-20 pd-sm-50">
+            <div class="form-group">
+                <input type="text" class="login_input" name="username" id="username1" placeholder="请输入手机号！"/>
+            </div>
+            <div class="form-group">
+                <input type="password" class="login_input" style="width:50%" name="password" id="password1"
+                       placeholder="请输入验证码！"/> <span>点击发送验证码</span>
+            </div>
+            <div class="form-group">
+                <input type="password" class="login_input" name="password" id="password2" placeholder="设置登录密码"/>
+            </div>
+            <div class="checkbox rember">
+                <label>
+                    <input type="checkbox"/>我已阅读并同意《美食港云端共享系统服务协议》
+                </label>
+            </div>
+            <button type="button" class="login_btn" id="login_reg">马上注册</button>
+        </div>
+    </div>
+
+
+</div>
+
+
+<footer class="footer text-center">
+    <div class="login_content">
+        <div>或者使用第三方账号注册
+        </div>
+    </div>
+    <p class="img "><img src="images/logo1.png" alt=""/></p>
+
+    <p class="ggh ">即到即吃，港刚好</p>
+</footer>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function () {
+        $(".top-login").click(function () {
+//               alert('adsd');
+            $(this).addClass("active");
+            $(".top-reg").removeClass("active");
+            $(".content1").css("display", "block");
+            $(".content2").css("display", "none");
+
+        });
+        $(".top-reg").click(function () {
+            $(this).addClass("active");
+            $(".top-login").removeClass("active");
+            $(".content2").css("display", "block");
+            $(".content1").css("display", "none");
+
+        })
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>美食港商家提供服务列表</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=0.48, minimum-scale=0.48, maximum-scale=2.0, user-scalable=yes" /> 
+
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="format-detection" content="telephone=no" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 引入   bootstrapcss  引入公共css --> 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+<link href="./css/common.css" rel="stylesheet" type="text/css"> 
+<!-- 引入图标 css  wkadd  -->
+<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+<!-- 引入  jquery bootstrap  js --> 
+<script src="./js/gpsPostion.js"></script>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- 引入  vuejs  -->
+<script type="text/javascript" src="./js/vue.js"></script>
+
+<style>
+/* 图标  */
+.iconfontscan {
+  font-family:"iconfont" !important;
+  font-size:60px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+.iconfontzo {
+  font-family:"iconfont" !important;
+  font-size:36px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#dd7060;
+  
+}
+.iconfontno {
+  font-family:"iconfont" !important;
+  font-size:36px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#999999;
+}
+.iconfontduihao {
+  font-family:"iconfont" !important;
+  font-size:26px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#19aa8d;
+}
+/* 图标  */
+
+  /* 附近精选重合部分开始  */
+.chg-selectedlist-box{margin:0 auto;width:750px; background:#f2f2f2;}
+.chg-selectedlist-box-header{width:750px; height:88px;background:#db6655;line-height:88px; }
+.chg-selectedlist-box-header-title{margin-left:30px;width:180px; height:88px; line-height:88px; text-align:left;font-size:36px; color:#ffffff;}
+  /* 附近精选重合部分结束  */
+  /*  增加css开始  */
+.chg-serverlist-title{margin-top:20px; width:750px; height:36px; text-align:center; font-size:2.5em;color:#333333; background:#fff;}
+ .chg-serverlist-main{margin:0 auto;background:#fff;} 
+  .chg-serverlist-main li{float:left; width:250px; height:125px; line-height:125px; text-align:center; font-size:30px; }
+  .chg-serverlist-main i{font-size:1.8em; display:block  }
+  .chg-serverlist-main span{margin-top:-80px;display:block; color:#dd7060;}
+  .chg-serverlist-main #addcolor{color:#999999;}
+
+ /*  增加css结束  */
+</style>
+
+
+</head>
+<body>
+  <!--   美食港商家服务列表开始 -->
+    <div class="chg-selectedlist-box">
+      <div class="chg-selectedlist-box-header">
+       <div class="chg-selectedlist-box-header-title">
+	   <a onClick="javascript :history.back(-1);"><i class="iconfont icon-fanhuijiantou"></i></a>配套设施</div>
+	  </div>
+	  <div class="chg-serverlist-title">
+	    -----我们提供的服务-----
+	  </div>
+	  <div class="chg-serverlist-main">
+	    <ul>
+		 <li>
+		 <i class="iconfontzo icon-wifiwofi"></i><span>WIFI</span>
+		 </li>
+		 <li>
+		 <i class="iconfontzo icon-kongtiao"></i><span>空调</span>
+		 </li>
+		 <li>
+		 <i class="iconfontzo icon-tingchewei"></i><span>停车位</span>
+		 </li>
+		 <li>
+		 <i class="iconfontzo icon-zuowei"></i><span>座位</span>
+		 </li>
+		 <div class="clear"></div>
+		</ul>
+	  </div>
+	  
+	  
+	  
+	  <div class="chg-serverlist-title">
+	    -----我们没有的服务-----
+	  </div>
+	  <div class="chg-serverlist-main">
+	    <ul>
+		 <li>
+		 <i class="iconfontno icon-wifiwofi"></i><span id="addcolor">WIFI</span>
+		 </li>
+		 <li>
+		 <i class="iconfontno icon-kongtiao"></i><span id="addcolor">空调</span>
+		 </li>
+		 <li>
+		 <i class="iconfontno icon-tingchewei"></i><span id="addcolor">停车位</span>
+		 </li>
+		 <li>
+		 <i class="iconfontno icon-zuowei"></i><span id="addcolor">座位</span>
+		 </li>
+		 <div class="clear"></div>
+		</ul>
+	  </div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+   </div>
+ 
+  <!--   美食港商家提供服务列表结束  -->
+
+<script>
+    function myrefresh()
+  {window.location.reload();}
+     var phoneWidth = parseInt(window.screen.width);
+     var phoneHeight = parseInt(window.screen.height);
+     var phoneScale = phoneWidth/750;//除以的值按手机的物理分辨率
+    var ua = navigator.userAgent;
+     if (/Android (\d+\.\d+)/.test(ua)) {
+         var version = parseFloat(RegExp.$1);
+          // andriod 2.3
+          if (version > 2.3) {
+		 
+		  document.write('<meta name="viewport" content="width=device-width,initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale='+phoneScale+',user-scalable=no">');
+             // andriod 2.3以上
+             
+         } else {
+		
+             document.write('<meta name="viewport" content="width=device-width,user-scalable=no">');
+         }
+         // 其他系统
+     } else {
+	
+         document.write('<meta name="viewport" content="width=device-width, initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale ='+phoneScale +',user-scalable=no,">');
+     }
+ </script>
+
+ 
+</body>
+
+</html>
+
+

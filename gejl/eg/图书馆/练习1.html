@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="container">
+    <header class="page-header">
+        <h1>图书馆</h1>
+    </header>
+
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-success">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                计算机类
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                     <div class="list-group"></div>
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                文学类
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="list-group"></div>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                儿童类
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="list-group"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <div class="panel panel-warning">
+                <div class="panel-heading"></div>
+
+                <div class="panel-body">
+                    <blockquote>
+                        <h2 class="title">HTML</h2>
+                        <footer> <span>作者:</span> <span class="author">W3C</span></footer>
+                    </blockquote>
+                    <div class="col-xs-6">
+                        <img src="../../images/16.jpg" alt="" class="img-rounded img-responsive">
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="lead"> <span>价格:$</span> <span class="price">20.99</span></p>
+                        <p class="lead"> <span>出版日期:</span> <code class="date">2016-02-01</code></p>
+                        <p class="lead"><span>类别:</span> <span class="zLei">计算机类</span></p>
+                        <p> <button class="btn btn-primary btn-lg  btn-block"> <span class="glyphicon glyphicon-shopping-cart"> </span> 购买</button></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../dist/js/jquery-3.1.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../dist/js/bootstrap.min.js"></script>
+    <script>
+        var computers = [];
+        var listerature = [];
+        var children = [];
+
+        function showBook(book){
+            $('.title').html(book.Title);
+            $('.author').html(book.Author);
+            $('.price').html(book.Price);
+            $('.date').html(book.PubDate);
+            $('.zLei').html(book.Category.Name);
+        }
+
+
+
+        $(function(){
+            $.getJSON('books.json',null,function(data){
+//                console.log(data);
+                $(data).each(function(index,book){
+//                    console.log(index);
+//                    console.log(book);
+                    if (book.Category.Id == 1){
+                        computers.push(book);
+                    }
+                    if (book.Category.Id == 2){
+                        listerature.push(book);
+                    }
+                    if (book.Category.Id == 3){
+                        children.push(book);
+                    }
+                });
+//                    console.log(computers);
+//                    console.log(listerature);
+//                    console.log(children);
+                $(computers).each(function(index,book){
+                    $('#collapseOne div').append($('<a>').addClass('list-group-item').html(book.Title).attr('href','#').on('click',function(){
+                        showBook(book);
+                    }))
+                });
+                $(listerature).each(function(index,book){
+                    $('#collapseTwo div').append($('<a>').addClass('list-group-item').html(book.Title).attr('href','#').on('click',function(){
+                        showBook(book);
+                    }))
+                });
+                $(children).each(function(index,book){
+                    $('#collapseThree div').append($('<a>').addClass('list-group-item').html(book.Title).attr('href','#').on('click',function(){
+                        showBook(book);
+                    }))
+                });
+
+                $('a[href="#collapseOne"]').append($('<span>').addClass('badge pull-right').html(computers.length));
+                $('a[href="#collapseTwo"]').append($('<span>').addClass('badge pull-right').html(listerature.length));
+                $('a[href="#collapseThree"]').append($('<span>').addClass('badge pull-right').html(children.length));
+
+
+
+
+            })
+
+
+
+
+        })
+
+    </script>
+</body>
+</html>

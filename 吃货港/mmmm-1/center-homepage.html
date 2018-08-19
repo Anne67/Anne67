@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>个人中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!-- 引入   bootstrapcss  引入公共css --> 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+<link href="./css/common.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/user.css"/>
+<!--引入iconFont-->
+<link rel="stylesheet" href="css/iconfont.css"/>
+   <style>
+      .center .item a{display:block;}
+      .center .head-img a{display: block;}
+      /*底部导航设置*/
+      .footer_nav{ height:45px;bottom:0;width:100%;background-color:#F3F3F3;color:#333;position:fixed;border-top:1px solid #ddd;}
+      .footer_nav .col-xs-4{background:#F3F3F3;height:45px;line-height: 45px;text-align: center;}
+      /*底部导航设置结束*/
+   </style>
+</head>
+<body>
+
+<div class="container center common-head">
+   <!--&lt;!&ndash;头部开始&ndash;&gt;-->
+   <!--<div class="row">-->
+      <!--<div class="header">-->
+         <!--<div class="col-xs-12">-->
+            <!--<p><i class="iconfont icon-chuyidong"></i><span>|</span>个人中心</p>-->
+         <!--</div>-->
+      <!--</div>-->
+   <!--</div>-->
+   <!--&lt;!&ndash;头部结束&ndash;&gt;-->
+   <!--头像设置开始-->
+   <div class="row">
+      <div class="top">
+         <div class="col-xs-12">
+            <!--点击设置按钮链接开始-->
+            <a href="center-setting.html"><i class="iconfont icon-shezhi3"></i></a>
+            <!--点击设置按钮结束-->
+
+            <div class="head-img">
+               <a href="self-setting.html"><img src="images/center-toux.png" class="img-responsive" alt=""/></a>
+            </div>
+            <p>小明</p>
+
+         </div>
+      </div>
+   </div>
+   <!--头像设置结束-->
+   <!--列表开始-->
+   <div class="row">
+      <div class="item first">
+         <a href="my-order.html" style="border-right: 1px solid #ddd;">
+            <i class="iconfont icon-dingdan pr24"></i>订单记录
+         </a>
+         <a href="my-collect.html">
+            <i class="iconfont icon-wodeshoucang pr24"></i>我的收藏
+         </a>
+      </div>
+      <div class="item">
+         <div class="col-xs-12">
+            <a href="bro-history.html">
+               <i class="iconfont icon-liulanjilu pr12"></i>浏览记录<i class="iconfont icon-next fr"></i>
+            </a>
+         </div>
+      </div>
+      <div class="item">
+         <div class="col-xs-12" id="hotline">
+            <a>
+               <i class="iconfont icon-kefurexian pr12"></i>客服热线<i class="iconfont icon-next fr"></i>
+            </a>
+         </div>
+      </div>
+      <div class="item">
+         <div class="col-xs-12">
+            <a href="feedback.html">
+               <i class="iconfont icon-yonghufankui03 pr12"></i>用户反馈<i class="iconfont icon-next fr"></i>
+            </a>
+         </div>
+      </div>
+      <div class="item">
+         <div class="col-xs-12">
+            <a href="recommend.html">
+               <i class="iconfont icon-cantingtuijian pr12"></i>推荐餐厅<i class="iconfont icon-next fr"></i>
+            </a>
+         </div>
+      </div>
+      <div class="item">
+         <div class="col-xs-12">
+            <a href="">
+               <i class="iconfont icon-yaoqinghaoyou pr12"></i>邀请好友<i class="iconfont icon-next fr"></i>
+            </a>
+         </div>
+      </div>
+
+   </div>
+   <!--列表结束-->
+</div>
+
+<div class="footer_nav fixed">
+   <div class="col-xs-4"><a href="index.html">首页</a></div>
+   <div class="col-xs-4"><a href="">优惠专区</a></div>
+   <div class="col-xs-4"><a href="">个人中心</a></div>
+</div>
+
+
+
+<!-- 引入  jquery bootstrap  js -->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script src="layer_mobile/layer.js"></script>
+<script>
+   $("#hotline").click(function(){
+      //底部对话框
+      layer.open({
+         title:'sadsd',
+         content: '客服热线：0575-12345678'
+         ,btn: '取消'
+         ,skin: 'footer'
+      });
+   })
+</script>
+</body>
+
+</html>
+
+

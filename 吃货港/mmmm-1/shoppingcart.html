@@ -1,0 +1,322 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>梁氏自助火锅</title>
+<link href="./css/common.css" rel="stylesheet" type="text/css"> 
+<!-- 引入图标 css  wkadd  -->
+<link rel="stylesheet" type="text/css" href="./css/iconfont.css">	
+</head>
+<style>
+
+.chg-shopcart-box .main{overflow:hidden;}
+.chg-shopcart-box .left-menu{width:25%;float:left;background-color:#eee;position:relative;overflow-y:scroll;height:40rem;}
+.chg-shopcart-box .left-menu ul li{line-height:60px;width:98%;text-align:center;font-size:14px;padding:3px 0;color:#333333;border-bottom:1px dashed #ddd;}
+.chg-shopcart-box .left-menu ul li.active{ !important;background-color:#eeeeee;border-right:1px solid #a8574b; color:#a8574b;}
+.chg-shopcart-box .right-con{display:none;width:75%;float:left;overflow-y:scroll;background:#fff;position:relative;height:35rem; }
+.chg-shopcart-box .con .con-active{display:block;    padding-bottom: 40px;}
+.chg-shopcart-box .right-con li{position:relative;height:75px;border-bottom:1px solid #e7eaeb;border-top:1px solid #fff;padding-bottom:8px;margin-bottom:2px;}
+.chg-shopcart-box .right-con li .menu-img{position:absolute;margin-left:10px;top:15px;border-radius:3px;cursor:pointer;}
+.chg-shopcart-box .right-con li .menu-img img{height:55px;width:55px;vertical-align:middle;border:0;}
+.chg-shopcart-box .right-con li .menu-txt{margin:15px 15px 15px 75px;}
+.chg-shopcart-box .right-con li .menu-txt h3{font-size:14px;margin-bottom:10px;margin-top:8px;}
+.chg-shopcart-box .right-con li .menu-txt 
+.chg-shopcart-box p{font-style:normal;line-height:20px;font-size:12px;vertical-align:bottom;}
+.chg-shopcart-box .right-con li .menu-txt p.list2 b{font-size:14px;color:#f00;}
+.chg-shopcart-box .right-con li .btn{background-color:transparent;position:absolute;right:0px;top:45%;cursor:pointer;padding:3px;height:38px;}
+.chg-shopcart-box .right-con li .btn button.minus,.subCount dd .btn button.ms{margin-right:-10px;display:none;}
+ .chg-shopcart-box .right-con li .btn button,.subCount dd .btn button{width:40px;height:40px;border:0;background:transparent;padding:0;}
+.chg-shopcart-box .right-con li .btn button strong,.subCount dd .btn button strong
+{padding:5px 10px;font-size:15px;display:inline-block;text-indent:-100px;padding:5px 11px;height:12px;}
+.chg-shopcart-box .right-con li .btn button.minus strong,.btn button.ms strong,.list-content .btn button.ms2 strong{background:url(./img/minus.png) no-repeat;background-size:22px 22px;}
+.chg-shopcart-box .right-con li .btn i,.subCount dd .btn i,i{display:none;width:22px;text-align:center;font-style:normal;vertical-align:top;margin-top:11px;line-height:18px;}
+.chg-shopcart-box .right-con li .btn button.add,.subCount dd .btn button.ad{margin-left:-10px;}
+.chg-shopcart-box .right-con li .btn button.add strong,.btn button.ad strong,.list-content .btn button.ad2 strong{background:url(./img/add.png) no-repeat;background-size:22px 22px;}
+.chg-shopcart-box .right-con li .btn .price,.subCount dd .btn .chg-shopcart-box .price{display:none;}
+.chg-shopcart-box .footer{display:block;position:fixed;width:100%;z-index:3;bottom:0px;color:#fff;background:#db6655;line-height:35px;font-size:15px;border-top:1px solid #e2e2e2;}
+.chg-shopcart-box .footer .left{float:left;margin:5px 10px;}
+.chg-shopcart-box .footer .right{margin-right:5%;float:right;}
+.chg-shopcart-box .footer .right .disable{margin-top:5px;background:#79a351; color:#fff; font-size:1.5em; display:block;}
+.chg-shopcart-box .footer 
+.chg-shopcart-box .xhlbtn{display:block;text-align:center;line-height:45px;background-color:#79a351;padding:0 15px;color:#fff;font-weight:bold;}
+.chg-shopcart-box button:focus{ outline: none;}
+.chg-shopcart-box .subFly{width: 100%;height:100%;position: fixed;top: 0;left: 0;z-index: 10;}
+.chg-shopcart-box .up,.up1{width: 100%;height:35%;background: #000;opacity: 0.5;}
+.chg-shopcart-box .up1{ width: 100%;background: #000;opacity: 0.5top: 0;height: 100%;display: none;position: absolute;}
+.chg-shopcart-box .down{ width: 100%; height:65%; background: #fff; position: relative;}
+.chg-shopcart-box .close {position: absolute;top: 10px;right: 10px;}
+.chg-shopcart-box .close img{ width:1.5rem; height:1.5rem;}
+.chg-shopcart-box .foot{ position: fixed;height:50px; line-height: 50px;width: 100%; bottom: 0;background: #F03C03;color: #ffffff;font-size: 16px;text-align: center;}
+.chg-shopcart-box .down dl{width: 96%;margin-left: 4%;border-bottom: 1px solid #dddddd;}
+.chg-shopcart-box .down dl.subName{height: 6rem;}
+.chg-shopcart-box .down dl.subName dt,.down dl.subName dd{float: left;}
+.chg-shopcart-box .down dl.subName dt{margin:-20px 15px 0 0;width: 28%;}
+.chg-shopcart-box .down dl.subName dt img{width:100%;border: 1px solid #dddddd;border-radius: 5px;}
+.chg-shopcart-box .down dl.subName dd{ margin:10px 0 0 5px;}
+.chg-shopcart-box .down dl.subName dd p{margin-bottom: 5px;}
+.chg-shopcart-box .down dl.subName dd p:nth-child(1){font-size: 17px;font-weight: bold;}
+.chg-shopcart-box .down dl.subName dd p:nth-child(2){color: #f00;}
+.chg-shopcart-box .down .subChose{padding:10px 0;min-height:3.2rem;}
+.chg-shopcart-box .down .subChose dt,.down .subChose dd{height:1rem;line-height: 1rem;}
+.chg-shopcart-box .down .subChose dd{float: left;padding: 0.3rem 0.6rem;border: 1px solid #666666;border-radius: 0.2rem;margin-top: 0.5rem;margin-right: 1rem;}
+.chg-shopcart-box .down dl.subCount {height:2.6rem;line-height: 2.6rem;}
+.chg-shopcart-box .down dl.subCount dt{float: left;}
+.chg-shopcart-box .down dl.subCount dd{float: right;}
+.chg-shopcart-box .down .subChose dd.m-active{color: #ffffff;background: #F03C03;border:1px solid #F03C03;}
+
+.chg-shopcart-box .shopcart-list {position: fixed;left: 0;bottom: 45px;width: 100%;min-height: 200px;display: none;z-index: 3;background: #ffffff;}
+
+.chg-shopcart-box .shopcart-list .list-header {height: 40px;line-height: 40px;padding: 0 18px;background: #f3f5f7;border-bottom: 1px solid rgba(7,17,27,0.1);}
+.chg-shopcart-box .shopcart-list .list-header .title {float: left;font-size: 14px;color: #07111b;}
+.chg-shopcart-box .shopcart-list .list-header .empty {float: right;font-size: 12px;color: #333333;}
+.chg-shopcart-box .shopcart-list .list-content {height:250px;padding: 0 18px;overflow: auto;background: #fff;}
+.chg-shopcart-box .shopcart-list .list-content .food {width: 100%;height: 40px;line-height: 40px;}
+.chg-shopcart-box .shopcart-list .list-content .food .name {line-height: 24px;font-size: 14px;color: #07111b;}
+.chg-shopcart-box .shopcart-list .list-content .food .price {position: absolute;right: 90px;bottom: 12px;line-height: 24px;font-size: 14px;font-weight: 700;color: #f01414;}
+.chg-shopcart-box .shopcart-list .list-content .food .cartcontrol-wrapper { position: absolute;right: 0;bottom: 6px;}
+.chg-shopcart-box .main #left li{line-height: 0;}
+.chg-shopcart-box .main #left li span{display: inline-block;text-align: center;padding: 15px 0;line-height: 25px;width:100%;}
+.chg-shopcart-box .food div,.food .btn{float: left;}
+.chg-shopcart-box .food div { width: 20%; text-align: center;}
+.chg-shopcart-box .food .btn{width: 30%;}
+.chg-shopcart-box .food div:nth-child(1){width: 50%;text-align: left;}
+.chg-shopcart-box .food div:nth-child(1) span.accountName{display: inline-block;min-width: 60%;}
+.chg-shopcart-box .food .btn{text-align: center;}
+.chg-shopcart-box .food .btn button{background: transparent;height: 40px;}
+.chg-shopcart-box .food .btn button strong{display: inline-block;width: 22px;height:22px;}
+
+</style>
+
+<body>
+
+<style>
+.chg-shopcart-box .chg-shopcart-head{margin:0 auto; min-width:320px; max-width:1080px;height:50px;  background:#ffffff;}
+.chg-shopcart-box .goodstype{min-width:320px; max-width:1080px;height:40px; color:#333333; text-align:left; font-size:1.2em; line-height:40px; background:#eeeeee; }
+.chg-shopcart-box .goodstype span{margin-left:5%;}
+.chg-shopcart-box .back{margin-left:5%;line-height:50px;font-size:1.5em;}
+.chg-shopcart-box .menu{margin-left:35%;line-height:50px;font-size:1.5em;}
+.chg-shopcart-box .ydmenu{height:30px;margin-top:10px;margin-right:5%;line-height:30px;font-size:1.5em; border:1px solid #cccccc; border-radius:5px;}
+</style>
+<div class="chg-shopcart-box">
+	<div class="chg-shopcart-head">
+	  <div class="back fl"><a onClick="javascript :history.back(-1);"><</i>
+			 </a></div>
+      <div class="menu fl">菜单</div>
+	  <div class="ydmenu fr">已点菜品</div>
+	</div>
+<div class="main">
+	<div class="left-menu"  id="left">
+		<ul>
+			<li><span>酒水饮料</span></li>
+			<li><span>生猛海鲜</span></li>
+		</ul>
+	</div>
+	<div class="con">
+	    
+		<div class="right-con con-active" style="display: none;">
+		    <div class="goodstype"><span>酒水饮料</span></div>
+			<ul>
+				<li>
+					<div class="menu-img"><img src="./img/pic.png" width="55" height="55"></div>
+					<div class="menu-txt">
+						<h4 data-icon="00">82年矿泉水</h4>
+						<p class="list1">饮料</p>
+						<p class="list2">
+							<b>￥</b><b>28</b>
+						</p><div class="btn">
+						<button class="minus">
+							<strong></strong>
+						</button>
+						<i>0</i>
+						<button class="add">
+							<strong></strong>
+						</button>
+						<i class="price">28</i>
+					</div>
+
+					</div>
+				</li>
+				<li>
+					<div class="menu-img"><img src="./img/pic.png" width="55" height="55"></div>
+					<div class="menu-txt">
+						<h4 data-icon="01">87年拉菲</h4>
+						<p class="list1">品牌酒水</p>
+						<p class="list2">
+							<b>￥</b><b>2551</b>
+						</p><div class="btn">
+						<button class="minus">
+							<strong></strong>
+						</button>
+						<i>0</i>
+						<button class="add">
+							<strong></strong>
+						</button>
+						<i class="price">25</i>
+					</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="right-con con-active" style="display: none;">
+		    <div class="goodstype"><span>生猛海鲜</span></div>
+			<ul>
+				<li>
+					<div class="menu-img"><img src="./img/pic.png" width="55" height="55"></div>
+					<div class="menu-txt">
+						<h4 data-icon="10">爆炒梭子蟹</h4>
+						<p class="list1">舟山海鲜</p>
+						<p class="list2">
+							<b>￥</b><b>26</b>
+						</p><div class="btn">
+						<button class="minus">
+							<strong></strong>
+						</button>
+						<i>0</i>
+						<button class="add">
+							<strong></strong>
+						</button>
+						<i class="price">26</i>
+					</div>
+
+					</div>
+				</li>
+				<li>
+					<div class="menu-img"><img src="./img/pic.png" width="55" height="55"></div>
+					<div class="menu-txt">
+						<h4 data-icon="11">爆炒鱿鱼</h4>
+						<p class="list1">东海特产</p>
+						<p class="list2">
+							<b>￥</b><b>24.5</b>
+						</p>
+						<div class="btn">
+							<button class="minus">
+								<strong></strong>
+							</button>
+							<i>0</i>
+							<button class="add">
+								<strong></strong>
+							</button>
+							<i class="price">22</i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="menu-img"><img src="./img/pic.png" width="55" height="55"></div>
+					<div class="menu-txt">
+						<h4 data-icon="12">阳澄湖大闸蟹</h4>
+						<p class="list1">湖鲜</p>
+						<p class="list2">
+							<b>￥</b><b>24</b>
+						</p><div class="btn">
+						<button class="minus">
+							<strong></strong>
+						</button>
+						<i>0</i>
+						<button class="add">
+							<strong></strong>
+						</button>
+						<i class="price">24</i>
+					</div>
+
+					</div>
+				</li>
+				<li>
+					<div class="menu-img"><img src="./img/pic.png" width="55" height="55"></div>
+					<div class="menu-txt">
+						<h4 data-icon="13">紫菜海鲜</h4>
+						<p class="list1">宁波海鲜</p>
+						<p class="list2">
+							<b>￥</b><b>27</b>
+						</p>
+						<div class="btn">
+							<button class="minus">
+								<strong></strong>
+							</button>
+							<i>0</i>
+							<button class="add">
+								<strong></strong>
+							</button>
+							<i class="price">27</i>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="up1"></div>
+	<div class="shopcart-list fold-transition" style="">
+		<div class="list-header">
+			<h1 class="title">已点菜品</h1>
+			<span class="empty"><i class="iconfont icon-shezhi3"></i>清空购物车</span>
+		</div>
+		<div class="list-content">
+			<ul></ul>
+		</div>
+	</div>
+	<div class="footer">  
+		<div class="left">已选：
+		<span id="cartN">
+			<span id="totalcountshow">0</span>份　总计：￥<span id="totalpriceshow">0</span></span>元  
+		</div>  
+		<div class="right">  
+			<a id="btnselect" class="xhlbtn  disable" href="javascript:void(0)">结算</a>  
+		</div>   
+	</div>
+</div>
+<div class="subFly">
+	<div class="up"></div>
+	<div class="down">
+		<a class="close" href="javascript:">
+			<img src="./img/close.png" alt="">
+		</a>
+		<dl class="subName">
+			<dt>
+				<img class="imgPhoto" src="./img/pic.png" alt="">
+			</dt>
+			<dd>
+				<p data-icon=""></p>
+				<p><span>¥ </span><span class="pce" style="font-size: 16px;font-weight: bold"></span></p>
+				<p>
+					<span>已选：“</span>
+					<span class="choseValue"></span>
+					<span>”</span>
+				</p>
+			</dd>
+		</dl>
+		<dl class="subChose">
+			<dt>口味</dt>
+			<dd class="m-active">辣味</dd>
+			<dd>酸甜</dd>
+		</dl>
+		<dl class="subCount">
+			<dt>购买数量</dt>
+			<dd>
+				<div class="btn">
+					<button class="ms" style="display: inline-block;">
+						<strong></strong>
+					</button>
+					<i style="display: inline-block;">1</i>
+					<button class="ad">
+						<strong></strong>
+					</button>
+					<i class="price">25</i>
+				</div>
+			</dd>
+		</dl>
+		<div class="foot">
+			<span>加入购物车</span>
+		</div>
+	</div>
+
+</div>
+</div>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/add.js"></script>
+<script type="text/javascript" src="./js/vue.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

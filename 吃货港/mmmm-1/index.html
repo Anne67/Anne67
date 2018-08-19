@@ -1,0 +1,540 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>美食港首页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=0.48, minimum-scale=0.48, maximum-scale=3.0, user-scalable=yes" /> 
+
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="format-detection" content="telephone=no" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 引入   bootstrapcss  引入公共css --> 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+<link href="./css/common.css" rel="stylesheet" type="text/css"> 
+<!-- 引入图标 css  wkadd  -->
+<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+<!-- 引入  jquery bootstrap  js --> 
+<script src="./js/gpsPostion.js"></script>
+<!--
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+-->
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- 引入  vuejs  -->
+<script type="text/javascript" src="./js/vue.js"></script>
+
+<style>
+/* 安  */
+.footer_nav{ height:90px;bottom:0;width:100%;background-color:#F3F3F3;color:#333;position:fixed;border-top:1px solid #ddd;}
+.footer_nav .col-xs-4{font-size:30px;background:#F3F3F3;height:90px;line-height: 90px;text-align: center;}
+/* 图标  */
+.iconfontscan {
+  font-family:"iconfont" !important;
+  font-size:60px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+.iconfontzo {
+  font-family:"iconfont" !important;
+  font-size:36px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#dd7060;
+  
+}
+.iconfontno {
+  font-family:"iconfont" !important;
+  font-size:36px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#999999;
+}
+.iconfontduihao {
+  font-family:"iconfont" !important;
+  font-size:26px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#19aa8d;
+}
+/* 图标  */
+
+/*遮罩层样式*/
+
+html,body {
+	margin:0;
+	height:100%;
+}
+html{
+
+ }
+#test {
+	width:100%;
+	height:100%;
+	background-color:#000;
+	/*position:absolute;*/
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:2;
+	opacity:0.3;
+	/*兼容IE8及以下版本浏览器*/
+	filter: alpha(opacity=30);
+	display:block;
+}
+#log_window {
+	width:460px;
+	height:806px;
+	/*background-color:#FF0;*/
+	margin: auto;
+	position: absolute;
+	z-index:3;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display:block;
+}
+
+#log_window a{
+	float:right;
+	font-size: 26px;
+}
+#log_window img{
+	width:460px;
+	height:806px;
+}
+#log_window .btn{
+	background:#f0b535;
+	color:#df3121;
+	width:354px;
+	height:58px;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 20px;
+	left:56px;
+	outline-style: none;
+	font-size:30px;
+}
+/*遮罩层样式结束*/
+
+/*banner开始*/
+.addWrap{ position:relative; max-width:1080px;min-width:750px;margin:0 auto; padding:0; }
+.addWrap .swipe{max-width:1080px;min-width:750px;overflow: hidden;visibility: hidden;position:relative;}
+.addWrap .swipe-wrap{overflow:hidden;position:relative;}
+.addWrap .swipe-wrap > div {float: left;width: 100%;position:relative;}
+#position{ position:absolute; bottom:5%; right:0; padding-right:8px; margin:0;width:100%;text-align:center;}
+#position li{width:10px;height:10px;margin:0 2px;display:inline-block;-webkit-border-radius:5px;border-radius:5px;background-color:#AFAFAF;}
+#position li.cur{background-color:#fff;}
+.img-responsive { display: block; max-width:100%;height: auto;}
+
+/*banner结束*/
+
+.chg-index-box{margin:0 auto; max-width:1080px;min-width:320px; background:#f2f2f2;font-weight:normal;}
+.chg-index-header{margin:0 auto;max-width:1080px;min-width:750px; max-height:90px; min-height:38.4px; background:#fff;}
+.chg-index-header-city{max-width:264px; min-width:120px; max-height:129px; min-height:92px; line-height:90px; font-size:25px; text-align:right;}
+#chg-index-header-form-control{margin-top:12px; margin-left:17px;max-width:731px;min-width:508px; min-height:67px; max-height:96px; background:#f2f2f2; border-radius:12px; text-align:center; font-size:25px; border:1px solid #ffffff;}
+.chg-index-header-scan{margin-right:3%;}
+.chg-index-header-scan-title{margin:-18px auto; font-size:20px; max-width:86px;min-width:60px; text-align:center;}
+.chg-index-menu{margin:0 auto;max-width:1080px;min-width:750px; height:268px; background:#fff; display:block;}
+.chg-index-menu ul{margin:0 auto; width:95%; height:268px;}
+.chg-index-menu li{float:left; margin-top:38px; width:25%;min-height:175px; max-height:129px;}
+.chg-index-menu img{margin-left:18%;; }
+.chg-index-menu div{margin-top:40px;font-size:25px;text-align:center;}
+.chg-index-main{margin:18px auto;max-width:1080px;min-width:750px;  background:#fff;}
+.chg-index-main-title{max-width:1080px;min-width:750px; height:90px;}
+.chg-index-main-title-1{margin-top:32px; margin-left:36px;width:4px; height:34px; background:#ec5d50;}
+.chg-index-main-title-2{margin-top:32px; margin-left:14px;width:133px; height:34px; font-size:33px; line-height:34px;}
+.chg-index-main-list{margin-top:10px; max-width:1080px;min-width:750px; height:210px; border-bottom:1px solid #e1e1e1;}
+.chg-index-main-list-img{margin-top:18px;margin-left:36px;width;173px; height:173px; border-radius:5px;}
+.chg-index-main-list-main ul{margin-top:18px;margin-left:36px;width;173px; height:173px; }
+.chg-index-main-list-main li{margin-top:20px;width;173px; height:27px; }
+.chg-index-main-list-main-title{font-size:32px; color:black;}
+.chg-index-main-list-main-title-size{font-size:28px; }
+.chg-index-main-list-main-title-color{font-size:28px; color:#ec5d50;}
+.chg-index-main-list-moods{margin-top:20px;font-size:24px; width:140px; height:27px; text-align:left;}
+.chg-index-main-list-moods span{color:#f9b61a;}
+
+
+.h{height:1300px; overflow:hidden;}
+
+</style>
+
+
+</head>
+
+
+
+
+
+<body>
+   <!--  大礼包开始  -->
+   <div id="yyy">
+      <div>
+	  <div id="test"></div>
+	  <div id="log_window">
+		  <a id="x" style="color:white;">关闭</a>
+		  <img src="./img/red.png" alt=""/>
+		  <button class="btn">注册领取</button>
+	  </div>
+    </div>
+   </div>
+
+   <!--  大礼包结束  -->
+
+  <!--   美食港首页开始  -->
+   <div class="chg-index-box">
+      <!--美食港首页头部开始 -->
+      <div class="chg-index-header">
+			<div class="chg-index-header-city fl" id="addr">
+			  <i class="iconfont icon-down-trangle"></i>
+			</div>
+			
+			<form class="form-inline fl" role="form">
+					<input type="text" class="form-control" id="chg-index-header-form-control" 
+					placeholder="试试搜一搜？">
+		   </form>
+		   <div class="chg-index-header-scan fr">
+		   <i class="iconfontscan icon-scan_icon"></i>
+		   <div class="chg-index-header-scan-title">扫一扫</div>
+		   </div>
+		   <div class="clear"></div>
+	  </div>
+      <!--美食港首页头部结束 -->
+	  <!--美食港banner图开始-->     
+	  <div class="chg-index-banner addWrap">
+				   <div class="swipe" id="mySwipe">
+						 <div class="swipe-wrap">
+							  <div><a href="./shopdetail.html"><img class="img-responsive" src="./img/banner.jpg"/></a></div>
+							  <div><a href="./shopdetail.html"><img class="img-responsive" src="./img/banner.jpg" /></a></div>
+							  <div><a href="./shopdetail.html"><img class="img-responsive" src="./img/banner.jpg"/></a></div>
+						 </div>
+						</div>
+					  <!--按转换按钮开始-->
+						<ul id="position">
+							   <li class="cur"></li>
+							   <li></li>
+							   <li></li>
+							   
+						</ul>
+					  <!--按转换按钮结束-->  
+	  </div> 
+	        <script src='./js/hhSwipe.js' type="text/javascript"></script>
+			<script type="text/javascript">
+				var bullets = document.getElementById('position').getElementsByTagName('li');
+				var banner = Swipe(document.getElementById('mySwipe'), {
+					auto: 4000,
+					continuous: true,
+					disableScroll:false,
+					callback: function(pos) {
+						var i = bullets.length;
+						while (i--) {
+							bullets[i].className = ' ';
+						}
+						bullets[pos].className = 'cur';
+					}
+				 })
+			</script>
+		<!--美食港banner结束-->
+		<!--美食港分类开始-->
+	    <div class="chg-index-menu">
+				   <ul>
+				   <li><a href="./local-food.html"><img src="./img/cityfoods.png" /></a>
+				   <div>本地美食</div>
+				   </li>
+				   <li><a href="./popularitylist.html"><img src="./img/persontop.png" /></a>
+				   <div>人气榜单</div>
+				   </li>
+				   <li><a href="popular-bns.html"><img src="./img/personarc.png" /></a>
+				   <div>人气商圈</div>
+				   </li>
+				   <li><img src="./img/personsay.png" />
+				   <div>选择氛围</div>
+				   </li>
+				   </ul>
+		</div> 
+		<!--美食港分类结束-->
+		<!--美食港列表开始-->
+        <div class="chg-index-main">
+		           <div class="chg-index-main-title">
+				      <div class="chg-index-main-title-1 fl">
+				      </div>
+					  <div class="chg-index-main-title-2 fl">
+					  附近推荐
+				      </div>
+					</div>
+                   <!-- 循环体开始-->					
+					<div class="chg-index-main-list">
+					    <div class="chg-index-main-list-img fl">
+					      <a href="./shopdetail.html"><img src="" class="img-load" data-src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main fl">
+					      <ul>
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+					 </div>
+					 <!-- 循环体结束-->
+			        <div class="chg-index-main-list">
+				<div class="chg-index-main-list-img fl">
+					<a href="./shopdetail.html"><img src="" class="img-load" data-src="./img/shopimg.png" alt="img" /></a>
+				</div>
+				<div class="chg-index-main-list-main fl">
+					<ul>
+						<li class="chg-index-main-list-main-title">上海小南国</li>
+						<li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+						<li class="chg-index-main-list-main-title-color">￥235/人</li>
+						<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+					</ul>
+				</div>
+				<div class="chg-index-main-list-moods fr">
+					热度：<span>85℃</span>
+				</div>
+			</div>
+			<div class="chg-index-main-list">
+				<div class="chg-index-main-list-img fl">
+					<a href="./shopdetail.html"><img src="" class="img-load" data-src="./img/shopimg.png" alt="img" /></a>
+				</div>
+				<div class="chg-index-main-list-main fl">
+					<ul>
+						<li class="chg-index-main-list-main-title">上海小南国</li>
+						<li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+						<li class="chg-index-main-list-main-title-color">￥235/人</li>
+						<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+					</ul>
+				</div>
+				<div class="chg-index-main-list-moods fr">
+					热度：<span>85℃</span>
+				</div>
+			</div>
+			<div class="chg-index-main-list">
+				<div class="chg-index-main-list-img fl">
+					<a href="./shopdetail.html"><img src="" class="img-load" data-src="./img/shopimg.png" alt="img" /></a>
+				</div>
+				<div class="chg-index-main-list-main fl">
+					<ul>
+						<li class="chg-index-main-list-main-title">上海小南国</li>
+						<li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+						<li class="chg-index-main-list-main-title-color">￥235/人</li>
+						<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+					</ul>
+				</div>
+				<div class="chg-index-main-list-moods fr">
+					热度：<span>85℃</span>
+				</div>
+			</div>
+			<div class="chg-index-main-list">
+				<div class="chg-index-main-list-img fl">
+					<a href="./shopdetail.html"><img src="" class="img-load" data-src="./img/shopimg.png" alt="img" /></a>
+				</div>
+				<div class="chg-index-main-list-main fl">
+					<ul>
+						<li class="chg-index-main-list-main-title">上海小南国</li>
+						<li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+						<li class="chg-index-main-list-main-title-color">￥235/人</li>
+						<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+					</ul>
+				</div>
+				<div class="chg-index-main-list-moods fr">
+					热度：<span>85℃</span>
+				</div>
+			</div>
+			<div class="chg-index-main-list">
+				<div class="chg-index-main-list-img fl">
+					<a href="./shopdetail.html"><img src="" class="img-load" data-src="./img/shopimg.png" alt="img" /></a>
+				</div>
+				<div class="chg-index-main-list-main fl">
+					<ul>
+						<li class="chg-index-main-list-main-title">上海小南国</li>
+						<li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+						<li class="chg-index-main-list-main-title-color">￥235/人</li>
+						<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+					</ul>
+				</div>
+				<div class="chg-index-main-list-moods fr">
+					热度：<span>85℃</span>
+				</div>
+			</div>
+			<div class="chg-index-main-list">
+				<div class="chg-index-main-list-img fl">
+					<a href="./shopdetail.html"><img src="" class="img-load" data-src="./img/shopimg.png" alt="img" /></a>
+				</div>
+				<div class="chg-index-main-list-main fl">
+					<ul>
+						<li class="chg-index-main-list-main-title">上海小南国</li>
+						<li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+						<li class="chg-index-main-list-main-title-color">￥235/人</li>
+						<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+					</ul>
+				</div>
+				<div class="chg-index-main-list-moods fr">
+					热度：<span>85℃</span>
+				</div>
+			</div>
+			<div class="chg-index-main-list">
+				<div class="chg-index-main-list-img fl">
+					<a href="./shopdetail.html"><img src="" class="img-load" data-src="./img/shopimg.png" alt="img" /></a>
+				</div>
+				<div class="chg-index-main-list-main fl">
+					<ul>
+						<li class="chg-index-main-list-main-title">上海小南国</li>
+						<li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+						<li class="chg-index-main-list-main-title-color">￥235/人</li>
+						<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+					</ul>
+				</div>
+				<div class="chg-index-main-list-moods fr">
+					热度：<span>85℃</span>
+				</div>
+			</div>
+
+				  
+		
+		</div>
+   
+        <!--美食港列表结束-->  
+   </div>
+   
+
+  <!--   美食港首页结束  -->
+
+    <article class="mb52">
+	当前详细位置：
+      
+		<div id="map" style="width:100%; height:400px"></div>
+	
+		<span id="addr"></span>
+	</article>
+	<!--  an 底层导航开始 -->
+ <div class="footer_nav fixed">
+   <div class="col-xs-4"><a href="index.html">首页</a></div>
+   <div class="col-xs-4"><a href="">优惠专区</a></div>
+   <div class="col-xs-4"><a href="center-homepage.html">个人中心</a></div>
+ </div>
+   <!--  an 底层导航结束 -->
+
+    <script src="./js/zepto.js"></script>
+	<script src="./js/base.js"></script>
+    <script src="./js/gpsPostion.js"></script>
+		
+<script>
+  	$(function(){
+		// TODO 用参数控制功能展示
+		$.gpsPosition(function(point){
+			// 地图展示
+			$.displayOnMap('map', point);
+			// 获取详细地址
+			$.getDetailAddress(function(address){$('#addr').html(address)}, point);
+		});
+	});
+ </script>
+ 
+ <!--  
+ <script>
+     var phoneWidth = parseInt(window.screen.width);
+     var phoneHeight = parseInt(window.screen.height);
+     var phoneScale = phoneWidth/750;//除以的值按手机的物理分辨率
+    var ua = navigator.userAgent;
+     if (/Android (\d+\.\d+)/.test(ua)) {
+         var version = parseFloat(RegExp.$1);
+          // andriod 2.3
+          if (version > 2.3) {
+             document.write('<meta name="viewport" content="width=device-width,initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale='+phoneScale+',user-scalable=no">');
+             // andriod 2.3以上
+         } else {
+             document.write('<meta name="viewport" content="width=device-width,user-scalable=no">');
+         }
+         // 其他系统
+     } else {
+         document.write('<meta name="viewport" content="width=device-width, initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale ='+phoneScale +',user-scalable=no,">');
+     }
+ </script>
+-->
+ <script>
+     var phoneWidth = parseInt(window.screen.width);
+     var phoneHeight = parseInt(window.screen.height);
+     var phoneScale = phoneWidth/750;//除以的值按手机的物理分辨率
+    var ua = navigator.userAgent;
+     if (/Android (\d+\.\d+)/.test(ua)) {
+         var version = parseFloat(RegExp.$1);
+          // andriod 2.3
+          if (version > 2.3) {
+		 
+		  document.write('<meta name="viewport" content="width=device-width,initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale='+phoneScale+',user-scalable=no">');
+             // andriod 2.3以上
+             
+         } else {
+		
+             document.write('<meta name="viewport" content="width=device-width,user-scalable=no">');
+         }
+         // 其他系统
+     } else {
+	
+         document.write('<meta name="viewport" content="width=device-width, initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale ='+phoneScale +',user-scalable=no,">');
+     }
+ </script>
+ <script src="./js/jquery-3.2.1.min.js"></script>
+
+<! --  大红包弹窗  -->
+<script>
+
+  $(document).ready(function(){
+　　$("#yyy").fadeTo();
+　　
+　   $("body").addClass("h");    
+  $("#x").click(
+ function(){
+ $("#yyy").hide();
+ $("body").removeClass("h");
+ });
+    });
+  $(".btn").click(
+  function(){alert("这里提交");}
+  );	
+   
+ </script>  
+  <script>
+	  function shield(){
+		  var s = document.getElementById("test");
+		  s.style.display = "block";
+
+		  var l = document.getElementById("log_window");
+		  l.style.display = "block";
+	  }
+
+	  function cancel_shield(){
+		  var s = document.getElementById("test");
+		  s.style.display = "none";
+
+		  var l = document.getElementById("log_window");
+		  l.style.display = "none";
+	  }
+  </script>
+   <!--图片懒加载js开始-->
+   <script src="./js/img.js"></script>
+   <script>
+	   SI.img({
+		   fadeIn: function() {
+			   this.style.opacity = 1;
+		   }
+	   })
+   </script>
+   <!--图片懒加载js结束-->
+ 
+</body>
+
+ 
+</html>
+
+

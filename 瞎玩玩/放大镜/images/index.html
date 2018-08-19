@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+
+        .box {
+            width: 350px;
+            height: 350px;
+            border: 1px solid #ccc;
+            position: relative;
+            margin: 100px 0 0 100px;
+        }
+        .small {
+            cursor: move;
+            position: relative;
+        }
+        .small .mask {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 0, 0.3);
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        .box .big {
+            width: 450px;
+            height: 450px;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 0;
+            left: 360px;
+            overflow: hidden;
+            display: none;
+        }
+        .box .big img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<div id="fangda" class="box">
+    <div class="small">
+        <img src="001.jpg" alt="小图">
+        <div class="mask"></div>
+    </div>
+    <div class="big">
+        <img src="0001.jpg" alt="大图">
+    </div>
+</div>
+
+<script>
+
+    var box = document.getElementById("fangda");//最外面的盒子
+    var small = box.children[0]; //小图的盒子
+    var mask = small.children[1]; //黄色的标记盒子
+    var big = box.children[1]; //放大的大盒子
+    var bigImg = big.children[0]; //大图片
+
+    //1隐藏和显示
+    small.onmouseover = function () {
+        mask.style.display = 'block';
+        big.style.display = 'block';
+    };
+    small.onmouseout = function () {
+        mask.style.display = 'none';
+        big.style.display = 'none';
+    };
+
+    //2 黄色透明区域的跟随鼠标
+    var x =0, y = 0;//这是黄色区域的坐标
+    small.onmousemove = function (e) {
+        e = e || window.event;
+        //mask.offsetWidth/2这里减去这个值是为了黄色盒子和鼠标居中重合
+        x = e.clientX - this.parentNode.offsetLeft-mask.offsetWidth/2;
+        y = e.clientY - this.parentNode.offsetTop-mask.offsetHeight/2;
+        if(x<0){
+            //左边界
+            x = 0;
+        }else if(x > small.offsetWidth-mask.offsetWidth) {
+            //右边界
+            x = small.offsetWidth-mask.offsetWidth;
+        }
+        if(y < 0){
+            //上边界
+            y=0
+        }else if(y > small.offsetHeight-mask.offsetHeight){
+            //下边界
+            y = small.offsetHeight-mask.offsetHeight;
+        }
+//        console.log(this.parentNode.offsetLeft);
+//        console.log(this.parentNode.offsetTop);
+        mask.style.left = x + 'px';
+        mask.style.top = y + 'px';
+
+        //x/small.width = bigImg.left/big.width
+        bigImg.style.left = -x * big.offsetWidth / small.offsetWidth + 'px';
+        bigImg.style.top = -y * big.offsetHeight / small.offsetHeight + 'px';
+    }
+
+</script>
+
+
+</body>
+</html>

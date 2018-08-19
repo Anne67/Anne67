@@ -1,0 +1,262 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>美食港商家详情</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=0.48, minimum-scale=0.48, maximum-scale=2.0, user-scalable=yes" /> 
+
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="format-detection" content="telephone=no" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 引入   bootstrapcss  引入公共css --> 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+<link href="./css/common.css" rel="stylesheet" type="text/css"> 
+<!-- 引入图标 css  wkadd  -->
+<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+<!-- 引入  jquery bootstrap  js --> 
+<script src="./js/gpsPostion.js"></script>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- 引入  vuejs  -->
+<script type="text/javascript" src="./js/vue.js"></script>
+
+<style>
+.chg-selectedlist-box{margin:0 auto;width:750px; background:#f2f2f2;}
+.chg-selectedlist-box-header{width:750px; height:88px;background:#db6655;line-height:88px; }
+.chg-selectedlist-box-header-title{margin-left:30px;width:360px; height:88px; line-height:88px; text-align:left;font-size:36px; color:#ffffff;}
+.chg-selectedlist-box-main{margin:0 auto;width:750px; }
+.chg-selectedlist-box-main ul{width:750px;}
+.chg-selectedlist-box-main li{margin:30px auto; width:690px; height:365px; background:#fff;}
+.chg-selectedlist-box-main-shop{width:450px; height:260px;}
+.chg-selectedlist-box-main-shop img{width:450px; height:260px;}
+.chg-selectedlist-box-main-foods{width:235px;}
+.chg-selectedlist-box-main-foods img{width:235px; height:128px;margin-bottom:4px;}
+.chg-selectedlist-box-main-content{height:104px;}
+.chg-selectedlist-box-main-content-title{margin-left:20px;width:600px; height:35px; text-align:left;color:#333333; line-height:35px; font-size:28px;}
+.chg-selectedlist-box-main-content-main{margin-left:20px;width:600px; height:35px; text-align:left;color:#666666; line-height:35px; font-size:24px;}
+#color1{color:#f9b10a}    #color2{color:#db6655;}
+</style>
+
+
+</head>
+<body>
+  <!--   美食港附近商家精选开始 增加惰性加载 ie不兼容 -->
+   <div class="chg-selectedlist-box">
+      <div class="chg-selectedlist-box-header">
+       <div class="chg-selectedlist-box-header-title"> <a onClick="javascript :history.back(-1);"><i class="iconfont icon-fanhuijiantou"></i>
+			 </a>附近精选</div>
+      </div>
+      <div class="chg-selectedlist-box-main">
+	   <ul>
+	     <li>
+		    <div class="chg-selectedlist-box-main-shop fl">
+			 <img class="img-load" src="" data-src="./img/shopping.jpg" alt=""/>
+			</div>
+			<div class="chg-selectedlist-box-main-foods fr">
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+			 
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+		    </div>
+			<div class="clear"></div>
+			<div class="chg-selectedlist-box-main-content">
+			   <div class="chg-selectedlist-box-main-content-title">
+			   波尔多大酒店
+			   </div>
+			   <div class="chg-selectedlist-box-main-content-main">
+			   热度：<span id="color1">85℃</span> 浙江菜|人均60元|<span id="color2">103米</span>
+			   </div>
+			</div>
+		 </li>
+		 
+		 
+		 <li>
+		    <div class="chg-selectedlist-box-main-shop fl">
+			 <img class="img-load" src="" data-src="./img/shopping.jpg" alt=""/>
+			</div>
+			<div class="chg-selectedlist-box-main-foods fr">
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+			 
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+		    </div>
+			<div class="clear"></div>
+			<div class="chg-selectedlist-box-main-content">
+			   <div class="chg-selectedlist-box-main-content-title">
+			   波尔多大酒店
+			   </div>
+			   <div class="chg-selectedlist-box-main-content-main">
+			   热度：<span id="color1">85℃</span> 浙江菜|人均60元|<span id="color2">103米</span>
+			   </div>
+			</div>
+		 </li>
+		 
+		 <li>
+		    <div class="chg-selectedlist-box-main-shop fl">
+			 <img class="img-load" src="" data-src="./img/shopping.jpg" alt=""/>
+			</div>
+			<div class="chg-selectedlist-box-main-foods fr">
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+			 
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+		    </div>
+			<div class="clear"></div>
+			<div class="chg-selectedlist-box-main-content">
+			   <div class="chg-selectedlist-box-main-content-title">
+			   波尔多大酒店
+			   </div>
+			   <div class="chg-selectedlist-box-main-content-main">
+			   热度：<span id="color1">85℃</span> 浙江菜|人均60元|<span id="color2">103米</span>
+			   </div>
+			</div>
+		 </li>
+		 
+		 <li>
+		    <div class="chg-selectedlist-box-main-shop fl">
+			 <img class="img-load" src="" data-src="./img/shopping.jpg" alt=""/>
+			</div>
+			<div class="chg-selectedlist-box-main-foods fr">
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+			 
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+		    </div>
+			<div class="clear"></div>
+			<div class="chg-selectedlist-box-main-content">
+			   <div class="chg-selectedlist-box-main-content-title">
+			   波尔多大酒店
+			   </div>
+			   <div class="chg-selectedlist-box-main-content-main">
+			   热度：<span id="color1">85℃</span> 浙江菜|人均60元|<span id="color2">103米</span>
+			   </div>
+			</div>
+		 </li>
+		 
+		 <li>
+		    <div class="chg-selectedlist-box-main-shop fl">
+			 <img class="img-load" src="" data-src="./img/shopping.jpg" alt=""/>
+			</div>
+			<div class="chg-selectedlist-box-main-foods fr">
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+			 
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+		    </div>
+			<div class="clear"></div>
+			<div class="chg-selectedlist-box-main-content">
+			   <div class="chg-selectedlist-box-main-content-title">
+			   波尔多大酒店
+			   </div>
+			   <div class="chg-selectedlist-box-main-content-main">
+			   热度：<span id="color1">85℃</span> 浙江菜|人均60元|<span id="color2">103米</span>
+			   </div>
+			</div>
+		 </li>
+		 
+		 <li>
+		    <div class="chg-selectedlist-box-main-shop fl">
+			 <img class="img-load" src="" data-src="./img/shopping.jpg" alt=""/>
+			</div>
+			<div class="chg-selectedlist-box-main-foods fr">
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+			 
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+		    </div>
+			<div class="clear"></div>
+			<div class="chg-selectedlist-box-main-content">
+			   <div class="chg-selectedlist-box-main-content-title">
+			   波尔多大酒店
+			   </div>
+			   <div class="chg-selectedlist-box-main-content-main">
+			   热度：<span id="color1">85℃</span> 浙江菜|人均60元|<span id="color2">103米</span>
+			   </div>
+			</div>
+		 </li>
+		 
+		 <li>
+		    <div class="chg-selectedlist-box-main-shop fl">
+			 <img class="img-load" src="" data-src="./img/shopping.jpg" alt=""/>
+			</div>
+			<div class="chg-selectedlist-box-main-foods fr">
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+			 
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+		    </div>
+			<div class="clear"></div>
+			<div class="chg-selectedlist-box-main-content">
+			   <div class="chg-selectedlist-box-main-content-title">
+			   波尔多大酒店
+			   </div>
+			   <div class="chg-selectedlist-box-main-content-main">
+			   热度：<span id="color1">85℃</span> 浙江菜|人均60元|<span id="color2">103米</span>
+			   </div>
+			</div>
+		 </li>
+		 
+		 <li>
+		    <div class="chg-selectedlist-box-main-shop fl">
+			 <img class="img-load" src="" data-src="./img/shopping.jpg" alt=""/>
+			</div>
+			<div class="chg-selectedlist-box-main-foods fr">
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+			 
+			 <img class="img-load" src="" data-src="./img/pipixia.jpg" alt=""/>
+		    </div>
+			<div class="clear"></div>
+			<div class="chg-selectedlist-box-main-content">
+			   <div class="chg-selectedlist-box-main-content-title">
+			   波尔多大酒店
+			   </div>
+			   <div class="chg-selectedlist-box-main-content-main">
+			   热度：<span id="color1">85℃</span> 浙江菜|人均60元|<span id="color2">103米</span>
+			   </div>
+			</div>
+		 </li>
+		 
+		 
+		 
+	   </ul>
+	    
+	  </div>
+   </div>
+ 
+  <!--   美食港附近商家精选结束  -->
+
+
+
+<script src="./js/img.js"></script>
+    <script>
+        SI.img({
+            fadeIn: function() {
+                this.style.opacity = 1;
+            }
+        })
+    </script>
+ <script>
+     var phoneWidth = parseInt(window.screen.width);
+     var phoneHeight = parseInt(window.screen.height);
+     var phoneScale = phoneWidth/750;//除以的值按手机的物理分辨率
+    var ua = navigator.userAgent;
+     if (/Android (\d+\.\d+)/.test(ua)) {
+         var version = parseFloat(RegExp.$1);
+          // andriod 2.3
+          if (version > 2.3) {
+		 
+		  document.write('<meta name="viewport" content="width=device-width,initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale='+phoneScale+',user-scalable=no">');
+             // andriod 2.3以上
+             
+         } else {
+		
+             document.write('<meta name="viewport" content="width=device-width,user-scalable=no">');
+         }
+         // 其他系统
+     } else {
+	
+         document.write('<meta name="viewport" content="width=device-width, initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale ='+phoneScale +',user-scalable=no,">');
+     }
+ </script>
+</body>
+
+</html>
+
+

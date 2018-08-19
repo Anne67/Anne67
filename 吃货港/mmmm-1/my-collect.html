@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>浏览记录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- 引入   bootstrapcss  引入公共css -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/user.css"/>
+    <!--引入iconFont-->
+    <link rel="stylesheet" href="css/iconfont.css"/>
+    <style>
+         .my-collect .item{height:118px;background-color: #fff;padding:15px 15px;border-bottom: 1px solid #dddddd;}
+         .my-collect .item .imgBox{width:85px;height:85px;margin-right: 20px;}
+         .my-collect .item .left{padding-left: 0;padding-right:20px;}
+         .my-collect .item .right{padding-right: 0;height:86px;}
+         .my-collect .item .right p{margin-bottom: 0.5rem;font-size: 1.3rem;}
+         .my-collect .item .right .title{font-size: 1.4rem;font-weight: 600;}
+         .my-collect .item .right .monery{color:#ec5d50;}
+         .my-collect .item .right .addr,.date{color:#666;}
+         html,body {
+             margin:0;
+             height:100%;
+         }
+         .test {
+             width:100%;
+             height:100%;
+             background-color:#000;
+             position:absolute;
+             top:0;
+             left:0;
+             z-index:2;
+             opacity:0.3;
+             /*兼容IE8及以下版本浏览器*/
+             filter: alpha(opacity=30);
+             display:none;
+         }
+         .log_window{
+             position: relative;
+             top:0;
+             left:0;
+             width:100%;
+             height:100%;
+             display:none;
+         }
+         .overlays{
+            position: absolute;
+             /*z-index: 4;*/
+             display: none;
+             width:100%;
+             height:100%;
+             top:0;
+             left:0;
+         }
+
+         .log_window img{
+             position: absolute;
+             right:0;
+             top:0;
+             z-index: 4;
+             height:25px;
+         }
+         .overlays .overlay{
+             display:inline-block;
+             position: absolute;
+             top:25px;
+             height:66px;
+             width: 66px;
+         }
+         .overlays .overlay img{
+             position: absolute;
+             top:0;
+             z-index: 5;
+             height:66px;
+             width: 66px
+         }
+         .overlays .overlay.imgLeft{
+             left:75px;
+         }
+         .overlays .overlay.imgRight{
+             right:75px;
+         }
+        .openCover{
+            position:absolute;
+            top: 15px;
+            right: 15px;
+        }
+         .openCover img{
+             height:25px;
+         }
+    </style>
+</head>
+<body>
+
+<div class="container my-collect">
+    <div class="row main">
+        <!--循环体start-->
+        <div class="item col-xs-12">
+            <div class="left col-xs-3" >
+                <div class="imgBox">
+                    <img src="images/eg1.png" alt="" class="img-responsive"/>
+                </div>
+            </div>
+            <div class="right col-xs-9">
+                <p>
+                    <span class="title">上海•小南国 </span>
+                    <span class="date fr"></span>
+                </p>
+                <p class="addr">世贸广场 2.5km</p>
+                <p class="monery">￥235人</p>
+                <p>营业时间：9:30——21:30</p>
+            </div>
+
+            <!--遮罩层开始-->
+            <div class="openCover">
+                <!--<a href="">-->
+                    <img src="images/collect_02.png" alt=""/>
+                <!--</a>-->
+            </div>
+            <div class="test"></div>
+            <div class="log_window">
+                <!--<a href="">-->
+                    <img src="images/collect_01.png" alt="" class="first"/>
+                <!--</a>-->
+            </div>
+            <div class="overlays">
+                <a href="http://www.baidu.com" class="overlay imgLeft">
+                    <img src="images/already_col.png" alt="img"/>
+                </a>
+                <a href="" class="overlay imgRight">
+                    <img src="images/find.png" alt=""/>
+                </a>
+            </div>
+            <!--遮罩层结束-->
+        </div>
+        <!--循环体end-->
+
+        <div class="item col-xs-12">
+            <div class="left col-xs-3" >
+                <div class="imgBox">
+                    <img src="images/eg1.png" alt="" class="img-responsive"/>
+                </div>
+            </div>
+            <div class="right col-xs-9">
+                <p>
+                    <span class="title">上海•小南国 </span>
+                    <span class="date fr"></span>
+                </p>
+                <p class="addr">世贸广场 2.5km</p>
+                <p class="monery">￥235人</p>
+                <p>营业时间：9:30——21:30</p>
+            </div>
+
+            <!--遮罩层开始-->
+            <div class="openCover">
+                <!--<a href="">-->
+                <img src="images/collect_02.png" alt=""/>
+                <!--</a>-->
+            </div>
+            <div class="test"></div>
+            <div class="log_window">
+                <!--<a href="">-->
+                <img src="images/collect_01.png" alt="" class="first"/>
+                <!--</a>-->
+            </div>
+            <div class="overlays">
+                <a href="http://www.baidu.com" class="overlay imgLeft">
+                    <img src="images/already_col.png" alt="img"/>
+                </a>
+                <a href="" class="overlay imgRight">
+                    <img src="images/find.png" alt=""/>
+                </a>
+            </div>
+            <!--遮罩层结束-->
+        </div>
+        <div class="item col-xs-12">
+            <div class="left col-xs-3" >
+                <div class="imgBox">
+                    <img src="images/eg1.png" alt="" class="img-responsive"/>
+                </div>
+            </div>
+            <div class="right col-xs-9">
+                <p>
+                    <span class="title">上海•小南国 </span>
+                    <span class="date fr"></span>
+                </p>
+                <p class="addr">世贸广场 2.5km</p>
+                <p class="monery">￥235人</p>
+                <p>营业时间：9:30——21:30</p>
+            </div>
+
+            <!--遮罩层开始-->
+            <div class="openCover">
+                <!--<a href="">-->
+                <img src="images/collect_02.png" alt=""/>
+                <!--</a>-->
+            </div>
+            <div class="test"></div>
+            <div class="log_window">
+                <!--<a href="">-->
+                <img src="images/collect_01.png" alt="" class="first"/>
+                <!--</a>-->
+            </div>
+            <div class="overlays">
+                <a href="http://www.baidu.com" class="overlay imgLeft">
+                    <img src="images/already_col.png" alt="img"/>
+                </a>
+                <a href="" class="overlay imgRight">
+                    <img src="images/find.png" alt=""/>
+                </a>
+            </div>
+            <!--遮罩层结束-->
+        </div>
+        <div class="item col-xs-12">
+            <div class="left col-xs-3" >
+                <div class="imgBox">
+                    <img src="images/eg1.png" alt="" class="img-responsive"/>
+                </div>
+            </div>
+            <div class="right col-xs-9">
+                <p>
+                    <span class="title">上海•小南国 </span>
+                    <span class="date fr"></span>
+                </p>
+                <p class="addr">世贸广场 2.5km</p>
+                <p class="monery">￥235人</p>
+                <p>营业时间：9:30——21:30</p>
+            </div>
+
+            <!--遮罩层开始-->
+            <div class="openCover">
+                <!--<a href="">-->
+                <img src="images/collect_02.png" alt=""/>
+                <!--</a>-->
+            </div>
+            <div class="test"></div>
+            <div class="log_window">
+                <!--<a href="">-->
+                <img src="images/collect_01.png" alt="" class="first"/>
+                <!--</a>-->
+            </div>
+            <div class="overlays">
+                <a href="http://www.baidu.com" class="overlay imgLeft">
+                    <img src="images/already_col.png" alt="img"/>
+                </a>
+                <a href="" class="overlay imgRight">
+                    <img src="images/find.png" alt=""/>
+                </a>
+            </div>
+            <!--遮罩层结束-->
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- 引入  jquery bootstrap  js -->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        var test = document.getElementsByClassName("test");
+        var openCover = document.getElementsByClassName("openCover");
+        var log_window = document.getElementsByClassName("log_window");
+        var overlays = document.getElementsByClassName("overlays");
+        for(var i=0; i<openCover.length; i++){
+            //给每一个添加一下索引
+            openCover[i].index=i;
+            //给每一个添加按钮点击事件
+            openCover[i].onclick=function(){
+//                alert(this.index);
+                test[this.index].style.display="block";
+                log_window[this.index].style.display="block";
+                overlays[this.index].style.display="block";
+
+            };
+            log_window[i].onclick=function(){
+                for(var j=0;j<log_window.length;j++){
+                    log_window[j].index=j;
+//                    alert(this.index);
+                    test[this.index].style.display="none";
+                    log_window[this.index].style.display="none";
+                    overlays[this.index].style.display="none";
+                }
+
+            }
+
+        }
+    })
+</script>
+</body>
+</html>

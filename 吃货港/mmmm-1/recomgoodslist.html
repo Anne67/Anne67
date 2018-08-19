@@ -1,0 +1,193 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>更多菜品推荐</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=0.48, minimum-scale=0.48, maximum-scale=2.0, user-scalable=yes" /> 
+
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="format-detection" content="telephone=no" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 引入   bootstrapcss  引入公共css --> 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+<link href="./css/common.css" rel="stylesheet" type="text/css"> 
+<!-- 引入图标 css  wkadd  -->
+<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+<!-- 引入  jquery bootstrap  js --> 
+<script src="./js/gpsPostion.js"></script>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- 引入  vuejs  -->
+<script type="text/javascript" src="./js/vue.js"></script>
+
+<style>
+    /* 附近精选重合部分开始  */
+.chg-selectedlist-box{margin:0 auto;width:750px; background:#f2f2f2;}
+.chg-selectedlist-box-header{width:750px; height:88px;background:#db6655;line-height:88px; }
+
+    /* 附近精选重合部分结束  */
+    /* 增加更多菜品CSS部分开始  */
+.chg-recomgoodslist-header-callback{margin-left:30px;width:360px; height:85px; line-height:85px; font-size:36px; text-align:left;}
+.chg-recomgoodslist-box-header-title{margin-left:5px;width:360px; height:88px; line-height:88px; text-align:left;font-size:36px; color:#ffffff;}	
+.chg-recomgoodslist-main{width:750px; background:#fff;}
+.chg-recomgoodslist-main ul{margin:0 auto; width:693px;}
+.chg-recomgoodslist-main-img{margin-top:30px;width:282px; height:160px;}
+.chg-recomgoodslist-main-img img{width:235px;height:132px;}
+.chg-recomgoodslist-main-content{margin-left:30px;}
+.chg-recomgoodslist-main-content ul{margin-top:30px; width:320px; height:160px;}
+.chg-recomgoodslist-main-contentli1{width:320px;height:28px; color:#333333; font-size:28px;line-height:28px;}
+.chg-recomgoodslist-main-contentli2{margin-top:23px;width:320px;height:28px; color:#666666; font-size:24px; line-height:28px;}
+.chg-recomgoodslist-main-contentli2 > span {color:#f9b10a;}
+.chg-recomgoodslist-main-contentli3{margin-top:23px;width:320px;height:28px; color:#db6655; font-size:24px;line-height:28px;}
+	/* 增加更多菜品CSS部分结束  */	 
+</style>
+
+
+</head>
+<body>
+           
+  <!--   美食港全部评论开始 -->
+   <div class="chg-selectedlist-box">
+      <div class="chg-selectedlist-box-header">
+        <div class="chg-recomgoodslist-box-header-title">
+		<div class="chg-recomgoodslist-header-callback fl">
+			 <a onClick="javascript :history.back(-1);"><i class="iconfont icon-fanhuijiantou"></i>
+			 </a>
+            更多推荐			 
+	   </div>
+		  </div>
+      <div class="chg-recomgoodslist-main">
+	    <ul>
+		<!--   循环体  -->
+		  <li>
+		    <div class="chg-recomgoodslist-main-img fl">
+			<img class="img-load fl" src="" data-src="./img/pipixia.jpg" alt="foods"/>
+			</div>
+			<div class="chg-recomgoodslist-main-content fl">
+			   <ul>
+			      <li class="chg-recomgoodslist-main-contentli1">麻辣香锅</li>
+				  <li class="chg-recomgoodslist-main-contentli2">热度：<span>85℃</span>
+				  </li>
+				  <li class="chg-recomgoodslist-main-contentli3">售价：￥35
+				  </li>
+			   </ul>
+			</div>
+		  </li>
+		  <!--   循环体结束  -->
+		  <!--   循环体  -->
+		  <li>
+		    <div class="chg-recomgoodslist-main-img fl">
+			<img class="img-load fl" src="" data-src="./img/pipixia.jpg" alt="foods"/>
+			</div>
+			<div class="chg-recomgoodslist-main-content fl">
+			   <ul>
+			      <li class="chg-recomgoodslist-main-contentli1">麻辣香锅</li>
+				  <li class="chg-recomgoodslist-main-contentli2">热度：<span>85℃</span>
+				  </li>
+				  <li class="chg-recomgoodslist-main-contentli3">售价：￥35
+				  </li>
+			   </ul>
+			</div>
+		  </li>
+		  <!--   循环体结束  -->
+		  <!--   循环体  -->
+		  <li>
+		    <div class="chg-recomgoodslist-main-img fl">
+			<img class="img-load fl" src="" data-src="./img/pipixia.jpg" alt="foods"/>
+			</div>
+			<div class="chg-recomgoodslist-main-content fl">
+			   <ul>
+			      <li class="chg-recomgoodslist-main-contentli1">麻辣香锅</li>
+				  <li class="chg-recomgoodslist-main-contentli2">热度：<span>85℃</span>
+				  </li>
+				  <li class="chg-recomgoodslist-main-contentli3">售价：￥35
+				  </li>
+			   </ul>
+			</div>
+		  </li>
+		  <!--   循环体结束  -->
+		<ul>
+	  </div>
+	  
+	  </div>
+   
+	
+		
+		
+   </div>
+ 
+  <!--   美食港全部评论全部结束  -->
+
+
+<!--   惰性加载JS    -->
+<script src="./js/img.js"></script>
+    <script>
+        SI.img({
+            fadeIn: function() {
+                this.style.opacity = 1;
+            }
+        })
+    </script>
+	
+	
+<!--  AJAX  JS    -->	
+  <script>
+   $(document).ready(
+   function(){
+     $("#add1").addClass("addbg");
+     $("#add2").click(
+	 function(){
+	 $("#add2").addClass("addbg");
+	 $("#add1").removeClass("addbg");
+	 $("#add3").removeClass("addbg");
+	 });
+	 $("#add1").click(
+	 function(){
+	 $("#add1").addClass("addbg");
+	 $("#add2").removeClass("addbg");
+	 $("#add3").removeClass("addbg");
+	 });
+	 $("#add3").click(
+	 function(){
+	 $("#add3").addClass("addbg");
+	 $("#add2").removeClass("addbg");
+	 $("#add1").removeClass("addbg");
+	 });
+   });
+  
+  
+  </script>
+
+   <script>
+     var phoneWidth = parseInt(window.screen.width);
+     var phoneHeight = parseInt(window.screen.height);
+     var phoneScale = phoneWidth/750;//除以的值按手机的物理分辨率
+    var ua = navigator.userAgent;
+     if (/Android (\d+\.\d+)/.test(ua)) {
+         var version = parseFloat(RegExp.$1);
+          // andriod 2.3
+          if (version > 2.3) {
+		 
+		  document.write('<meta name="viewport" content="width=device-width,initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale='+phoneScale+',user-scalable=no">');
+             // andriod 2.3以上
+             
+         } else {
+		
+             document.write('<meta name="viewport" content="width=device-width,user-scalable=no">');
+         }
+         // 其他系统
+     } else {
+	
+         document.write('<meta name="viewport" content="width=device-width, initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale ='+phoneScale +',user-scalable=no,">');
+     }
+ </script>
+ 
+</body>
+
+</html>
+
+

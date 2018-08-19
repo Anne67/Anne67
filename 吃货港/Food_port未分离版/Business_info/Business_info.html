@@ -1,0 +1,77 @@
+<!Doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="iconfont.css">
+    <script src="./jquery.min.js"></script>
+    <style>
+        .bns-info .mgl{border-radius: 15px 0 0 15px;}
+        .bns-info .mgr{border-radius: 0 15px 15px 0}
+        .bns-info .modal-content{border-radius: 15px;width:812px;}
+        .bns-info .modal-header{background:#f2f2f2;height:80px;border-radius: 15px 15px 0 0;}
+        .bns-info .modal-header h4{font-size: 32px;text-align: center;}
+        .bns-info .modal-dialog .iconfont{font-size: 32px;position: absolute;right:44px;top:22px;}
+        .bns-info .modal-body{padding:0 30px;color:#888888;}
+        .bns-info .modal-body p{font-size: 22px;margin:0;padding:19px 0;}
+        .bns-info .modal-body .p-right{position:absolute;right:0;top:0;padding:22px}
+        .bns-info .modal-body .p-right .switch{border:1px solid #f66867;border-radius: 15px; display:inline-block;}
+        .bns-info .modal-body .p-right .switch span{padding:13px 24px;display: inline-block;}
+        .bns-info .modal-body .p-right .switch .active{background:#f66867;color:#fff;}
+        .bns-info .modal-body .p-right p{padding:0;margin-bottom: 30px;}
+        .bns-info .modal-footer {padding:8px 30px;}
+        .bns-info .modal-footer p.tit{text-align: center;font-size: 30px;}
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 选择商户信息模态框（Modal） -->
+    <div class="modal bns-info fade pbtn-modal share-to in" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog mt10">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="iconfont icon-shanchu cancel3" style="color:#000;font-size: 32px;"></i></span></button>
+                    <h4 class="modal-title">商户信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>商户ID: 123456</p>
+                    <p>商户名称：梁氏自助火锅连锁</p>
+                    <p>店铺地址：浙江省绍兴XXXX</p>
+                    <p>营业时间：早九点晚九点</p>
+                    <p>商家电话：0575-8577XXXX</p>
+                    <div class="p-right">
+                        <p>排号：<span class="switch"><span class="mgl active">开启</span><span class="mgr">关闭</span></span></p>
+                        <p>在线客服：<small>0575-85987574</small></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p class="tit">关于美食港</p>
+                    <p style="text-align: left">XXXXXXXXXXXXXXXXXXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        <a data-toggle="modal" href="#cityModal" class="btn btn-primary btn-large">a标签打开模态框</a>
+        <!--<a href="javascript:;" id="open_modal" class="btn btn-primary btn-large">JS打开模态框</a>-->
+    </p>
+</div>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+
+
+        /*
+         * 通过js弹出模态框
+         */
+        $('#open_modal').click(function () {
+            $('#cityModal').modal();
+        });
+    });
+</script>
+
+</body>
+</html>

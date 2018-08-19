@@ -1,0 +1,143 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>选择氛围</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=0.48, minimum-scale=0.48, maximum-scale=2.0, user-scalable=yes" /> 
+
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="format-detection" content="telephone=no" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 引入   bootstrapcss  引入公共css --> 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+<link href="./css/common.css" rel="stylesheet" type="text/css"> 
+<!-- 引入图标 css  wkadd  -->
+<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+<!-- 引入  jquery bootstrap  js --> 
+<script src="./js/gpsPostion.js"></script>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- 引入  vuejs  -->
+<script type="text/javascript" src="./js/vue.js"></script>
+
+<style>
+    /* 附近精选首页重合部分开始  */
+	.chg-index-main{margin:18px auto;width:750px;  background:#fff;}
+	.chg-index-main-list{margin-top:10px; width:750px; height:210px; border-bottom:1px solid #e1e1e1;}
+.chg-index-main-list-img{margin-top:18px;margin-left:36px;width;173px; height:173px; border-radius:5px;}
+.chg-index-main-list-main ul{margin-top:18px;margin-left:36px;width;173px; height:173px; }
+.chg-index-main-list-main li{margin-top:20px;width;173px; height:27px; }
+.chg-index-main-list-main-title{font-size:32px; color:black;}
+.chg-index-main-list-main-title-size{font-size:28px; }
+.chg-index-main-list-main-title-color{font-size:28px; color:#ec5d50;}
+.chg-index-main-list-moods{margin-top:20px;font-size:24px; width:140px; height:27px; text-align:left;}
+.chg-index-main-list-moods span{color:#f9b61a;}
+.chg-selectedlist-box{margin:0 auto;width:750px; background:#f2f2f2;}
+.chg-selectedlist-box-header{width:750px; height:88px;background:#db6655;line-height:88px; }
+     .chg-shopdetail-recom-main{margin-left:20px;width:710px; }
+		.chg-shopdetail-recom-main-1{width:400px; height:279px;}
+		.chg-shopdetail-recom-main-1 > span{margin-top:-279px; margin-left:0px;width:98px; height:50px;position:absolute; z-index:100;color:#f6d482;font-size:26px; background:#333;opacity:0.9; text-align:center;line-height:50px; }
+		.chg-shopdetail-recom-main-1-title{margin-top:-56px;magin-right:-400px;  width:400px;height:56px; line-height:56px; text-align:center; font-size:30px; color:#fff;background:#333;opacity:0.7;position:absolute; z-inex:100; }
+		.chg-shopdetail-recom-main-1 img{width:400px; height:279px;}
+		.chg-shopdetail-recom-main-2{margin-right:20px;width:278px; height:279px;}
+		.chg-shopdetail-recom-main-2-1{width:278px; height:151px;}
+		.chg-shopdetail-recom-main-2-2{margin-top:15px;width:278px; height:112px;}
+		.chg-shopdetail-recom-main-2-1 img{ width:278px; height:151px;display:block;}
+		.chg-shopdetail-recom-main-2-2 img{width:278px; height:112px;display:block;}
+		.chg-shopdetail-recom-main-3{margin-right:20px;width:279px; height:112px;}
+    /* 附近精选重合部分结束  */
+    /*  这里与人气榜单重合 */
+.chg-popularitylist-header-callback{margin-left:30px;width:360px; height:85px; line-height:85px; font-size:26px; text-align:left; color:#fff;}
+.chg-popularitylist-header{ margin:0 auto; width:750px; height:90px;}
+.chg-popularitylist-header ul{width:750px; height:90px;}
+.chg-popularitylist-header li{float:left; width:187px; height:90px; line-height:90px; text-align:center; font-size:28px; color:#333333;}
+.chg-popularitylist-img{margin:0 auto;width:750px; height:299px;}
+.chg-popularitylist-img img{width:750px; height:299px;}
+.chg-popularitylist-main-list-main ul{margin-top:-30px;}
+.chg-popularitylist-main-list-moods{margin-top:-20px;}
+	/* 这里与人气榜单重合  */
+      /*   增加 css开始   */	
+	 .chg-atmospherelist-add{border-radius:10px 0px 0px 0px;}
+	 
+	  /*   增加 css开始   */	
+</style>
+
+
+</head>
+<body>
+           
+  <!--   美食港氛围开始 -->
+   <div class="chg-selectedlist-box">
+      <div class="chg-selectedlist-box-header">
+		<div class="chg-recomgoodslist-box-header-title">
+			<div class="chg-popularitylist-header-callback fl">
+				 <a onClick="javascript :history.back(-1);"><i class="iconfontback icon-back"></i>
+				 </a>
+				 氛围			 
+		    </div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="chg-popularitylist-header">
+		  <ul>
+		   <li>附近</li><li>品类</li><li>智能排序</li><li>筛选</li>
+		  </ul>
+		</div>
+		<div class="chg-popularitylist-img">
+		  <img src="./img/fenwei.jpg" alt=""/>
+		</div>
+		<div class="chg-index-main">
+		<!-- 循环体开始-->					
+					<div class="chg-shopdetail-recom-main">
+		     <div class="chg-shopdetail-recom-main-1 chg-atmospherelist-add fl">
+			 <a href=""><img src="./img/zhutui.jpg" alt="foods" /></a>
+
+		     </div>
+			 
+			 <div class="chg-shopdetail-recom-main-2 fr">
+			   <div class="chg-shopdetail-recom-main-2-1">
+			     <a href=""><img src="./img/gg1.jpg" alt="foods" /></a>
+		       </div>
+			   <div class="chg-shopdetail-recom-main-2-2">
+			     <div class="chg-shopdetail-recom-main-3">
+			     <a href=""><img src="./img/gg2.jpg" alt="foods" /></a>
+				 </div>
+		       </div>
+		      </div>
+			   <div class="clear"></div>
+		   </div>		
+		<!-- 循环体结束-->
+	    </div>
+	  </div>
+   
+	
+		
+		
+   </div>
+ 
+  <!--   美食港氛围结束  -->
+
+
+<!--   惰性加载JS    -->
+<script src="./js/img.js"></script>
+    <script>
+        SI.img({
+            fadeIn: function() {
+                this.style.opacity = 1;
+            }
+        })
+    </script>
+	
+	
+
+   
+ 
+</body>
+
+</html>
+
+

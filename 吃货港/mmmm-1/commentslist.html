@@ -1,0 +1,230 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>美食港评论列表内容</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=0.48, minimum-scale=0.48, maximum-scale=2.0, user-scalable=yes" /> 
+
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="format-detection" content="telephone=no" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 引入   bootstrapcss  引入公共css --> 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+<link href="./css/common.css" rel="stylesheet" type="text/css"> 
+<!-- 引入图标 css  wkadd  -->
+<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+<!-- 引入  jquery bootstrap  js --> 
+<script src="./js/gpsPostion.js"></script>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- 引入  vuejs  -->
+<script type="text/javascript" src="./js/vue.js"></script>
+
+<style>
+    /* 附近精选重合部分开始  */
+.chg-selectedlist-box{margin:0 auto;width:750px; background:#f2f2f2;}
+.chg-selectedlist-box-header{width:750px; height:88px;background:#db6655;line-height:88px; }
+.chg-selectedlist-box-header-title{margin-left:30px;width:360px; height:88px; line-height:88px; text-align:left;font-size:36px; color:#ffffff;}
+
+    /* 附近精选重合部分结束  */
+    /* 商户详情 评论区重合部分开始  */
+          .chg-shopdetail-comments{margin:20px auto; width:750px;  background:#fff;}
+		   
+		   .chg-shopdetail-comments-list{margin:20px auto;width:710px;  }
+		   .chg-shopdetail-comments-list ul{width:710px;}
+		   .chg-shopdetail-comments-list li{margin-bottom:20px;width:710px; border-bottom:1px solid #cccccc;}
+		   .chg-shopdetail-comments-list-person{width:70px;height:70px; border-radius:70px;}
+		   .chg-shopdetail-comments-list-content{width:601px; font-size:24px;}
+		   
+		   .chg-shopdetail-comments-list-content-title{width:601px; height:25px;text-align:left; }
+		   .chg-shopdetail-comments-list-content-comments{margin-top:20px;width:601px; height:25px;text-align:left; }
+         .chg-shopdetail-comments-list-content-main{margin-top:20px;width:601px; text-align:justify;}
+		 .chg-shopdetail-comments-list-content-main img{margin-right:40px;margin-bottom:40px;}
+		 .chg-shopdetail-comments-list-contentall{font-size:24px; height:42px;line-height:20px; }
+		 /* 商户详情 评论区重合部分结束  */
+		 
+		 /*  增加CSS代码开始  */
+		 .chg-comentslist-box{padding-top:10px;margin:0 auto; background:#fff;}
+		 .chg-comentslist-title{margin:13px auto;width:710px; height:60px;
+		border:1px solid #f0b535; border-radius:5px; }
+		 .chg-comentslist-title ul{width:710px; height:60px; color:#f0b535;}
+		 .chg-comentslist-title li{
+		 float:left;width:236px; height:60px; text-align:center; line-height:60px; font-size:24px; }
+		 .chg-comentslist-comments-staglist{margin:0 auto;width:710px; border-bottom:20px solid #fff;}
+		  .chg-comentslist-title #add2{border-left:1px solid #f0b535;border-right:1px solid #f0b535;}
+		  .chg-comentslist-comments-staglist ul{width:710px;}
+		   .chg-comentslist-comments-staglist li{margin-top:7px;
+		   margin-right:45px; float:left; height:44px; font-size:24px; text-align:center;line-height:24px; color:#666666; border:1px solid #f0b535; border-radius:5px;padding:10px;}
+		   .addbg{background:#f0b535; color:#333333;}
+		 /*  增加CSS代码结束  */
+		 
+		 
+</style>
+
+
+</head>
+<body>
+           
+  <!--   美食港全部评论开始 -->
+   <div class="chg-selectedlist-box">
+      <div class="chg-selectedlist-box-header">
+       <div class="chg-selectedlist-box-header-title"><a onClick="javascript :history.back(-1);"><i class="iconfont icon-fanhuijiantou"></i>
+			 </a>用户评论</div>
+      </div>
+   <div class="chg-comentslist-box">	  
+	<div class="chg-comentslist-title">
+		      <ul>
+			     <li type="button" id="add1">全部</li>
+				 <li type="button" id="add2">有图</li>
+			     <li type="button" id="add3">无图</li>
+			  </ul>
+		   
+	</div>
+		   
+    <div class="chg-comentslist-comments-staglist">
+		     <ul>
+			 <li type="button">回头客（999）</li>
+			 <li type="button">卫生（999）</li>
+			 <li type="button">请客（585）</li>
+			 <li type="button">好吃（585）</li>
+			 <li type="button">朋友聚餐（123）</li>
+			 <li type="button">深夜食堂（58）</li>
+			 </ul>
+			 <div class="clear"></div>
+	</div>
+   </div>	
+	  
+	  
+	  
+	  <!-- 公用 商家网友点评详情 css开始 -->
+  <div class="chg-shopdetail-comments">
+		
+           <div class="chg-shopdetail-comments-list">
+		     <ul>
+			 <!--  循环体开始  -->
+			  <li>
+			  <img class="chg-shopdetail-comments-list-person fl"
+               src="./img/zxy.jpg" alt="person"
+			  />
+			  <div class="chg-shopdetail-comments-list-content fr">
+			      <div class="chg-shopdetail-comments-list-content-title">
+			       优质小少年
+			      </div>
+				  <div class="chg-shopdetail-comments-list-content-comments">
+			       打分：5.0分
+			      </div>
+				  <div class="chg-shopdetail-comments-list-content-main">
+			       味道真的不错哦，好久没有来了，味道还是以前的味道，店家服务态度很好，推荐给大家。给五分好评。顺便晒下图。<br/>
+				  <img  width="141" height="141" class="img-load fl" src="" data-src="./img/ms.jpg" />
+				   <img width="141" height="141" class="img-load fl" src="" data-src="./img/ms.jpg" />
+				   <img width="141" height="141" class="img-load fl" src="" data-src="./img/ms.jpg" />
+			      </div>
+			  </div>
+			  <div class="clear"></div>
+			  </li>
+			  <!--  循环体结束  -->
+              <li>
+			  <img class="chg-shopdetail-comments-list-person fl"
+               src="./img/zxy.jpg" alt="person"
+			  />
+			  <div class="chg-shopdetail-comments-list-content fr">
+			      <div class="chg-shopdetail-comments-list-content-title">
+			       优质小少年
+			      </div>
+				  <div class="chg-shopdetail-comments-list-content-comments">
+			       打分：5.0分
+			      </div>
+				  <div class="chg-shopdetail-comments-list-content-main">
+			       味道真的不错哦，好久没有来了，味道还是以前的味道，店家服务态度很好，推荐给大家。给五分好评。顺便晒下图。<br/>
+				   <img  width="141" height="141" class="img-load fl" src="" data-src="./img/ms.jpg" />
+				   <img width="141" height="141" class="img-load fl" src="" data-src="./img/ms.jpg" />
+				   <img width="141" height="141" class="img-load fl" src="" data-src="./img/ms.jpg" />
+			      </div>
+			  </div>
+			  <div class="clear"></div>
+			  </li>
+              			  
+			 </ul>
+			 
+           </div>		   
+		</div>
+		<!-- 公用 商家网友点评详情 css结束 -->
+		
+		
+   </div>
+ 
+  <!--   美食港全部评论全部结束  -->
+
+
+<!--   惰性加载JS    -->
+<script src="./js/img.js"></script>
+    <script>
+        SI.img({
+            fadeIn: function() {
+                this.style.opacity = 1;
+            }
+        })
+    </script>
+	
+	
+<!--  AJAX  JS    -->	
+  <script>
+   $(document).ready(
+   function(){
+     $("#add1").addClass("addbg");
+     $("#add2").click(
+	 function(){
+	 $("#add2").addClass("addbg");
+	 $("#add1").removeClass("addbg");
+	 $("#add3").removeClass("addbg");
+	 });
+	 $("#add1").click(
+	 function(){
+	 $("#add1").addClass("addbg");
+	 $("#add2").removeClass("addbg");
+	 $("#add3").removeClass("addbg");
+	 });
+	 $("#add3").click(
+	 function(){
+	 $("#add3").addClass("addbg");
+	 $("#add2").removeClass("addbg");
+	 $("#add1").removeClass("addbg");
+	 });
+   });
+  
+  
+  </script>
+
+   <script>
+     var phoneWidth = parseInt(window.screen.width);
+     var phoneHeight = parseInt(window.screen.height);
+     var phoneScale = phoneWidth/750;//除以的值按手机的物理分辨率
+    var ua = navigator.userAgent;
+     if (/Android (\d+\.\d+)/.test(ua)) {
+         var version = parseFloat(RegExp.$1);
+          // andriod 2.3
+          if (version > 2.3) {
+		 
+		  document.write('<meta name="viewport" content="width=device-width,initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale='+phoneScale+',user-scalable=no">');
+             // andriod 2.3以上
+             
+         } else {
+		
+             document.write('<meta name="viewport" content="width=device-width,user-scalable=no">');
+         }
+         // 其他系统
+     } else {
+	
+         document.write('<meta name="viewport" content="width=device-width, initial-scale='+phoneScale+',minimum-scale='+phoneScale+',maximum-scale ='+phoneScale +',user-scalable=no,">');
+     }
+ </script>
+ 
+</body>
+
+</html>
+
+

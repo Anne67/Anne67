@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#big{
+    width: 1300px;
+    height: 500px;
+    margin:100px auto;
+}
+.item{
+    width: 100px;
+    height: 500px;
+    float:left;
+}
+.item p{
+    font-size: 24px;
+    width: 24px;
+    margin:10px;
+    font-family: Microsoft "Microsoft YaHei";
+    color:#fff;
+    float:left;
+}
+.item .icon{
+    width: 100px;
+    background-color: rgba(0,0,0,.5);
+    height:500px;
+    cursor: pointer;
+}
+
+.item1{
+    background-image: url("../1.jpg.jpg");
+}
+.item2{
+    background-image: url("../2.jpg.jpg");
+}
+.item3{
+    background-image: url("../3.jpg.jpg");
+}
+.item4{
+    width: 800px;
+    height:500px;
+    background-image: url("../4.jpg.jpg");
+}

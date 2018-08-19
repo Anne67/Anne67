@@ -1,0 +1,28 @@
+#bd{
+	position: absolute;
+/*	width:200px;
+	height:200px;
+	background-color: green;
+*/
+}
+/*div img{
+	width:200px;
+	height:200px;
+}*/
+body {
+	/*background-color: green;*/
+	background-image: url("../images/07.jpg") ;
+	overflow: hidden;
+	transform:rotateY(0deg);
+}
+.bd_38{
+	transform:rotate(80deg);
+}
+.bd_39{
+	transform:rotateY(180deg);
+/*	-webkit-transform:rotateY(180deg);
+	background-color: red;*/
+}
+.bd_40{
+	transform: rotate(-60deg);
+}

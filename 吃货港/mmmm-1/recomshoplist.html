@@ -1,0 +1,253 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>网友推荐</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=0.48, minimum-scale=0.48, maximum-scale=2.0, user-scalable=yes" /> 
+
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="format-detection" content="telephone=no" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 引入   bootstrapcss  引入公共css --> 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+<link href="./css/common.css" rel="stylesheet" type="text/css"> 
+<!-- 引入图标 css  wkadd  -->
+<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+<!-- 引入  jquery bootstrap  js --> 
+<script src="./js/gpsPostion.js"></script>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- 引入  vuejs  -->
+<script type="text/javascript" src="./js/vue.js"></script>
+
+<style>
+/*   附近精选重合部分 CSS开始     */
+.chg-selectedlist-box{margin:0 auto;width:750px; background:#f2f2f2;}
+.chg-selectedlist-box-header{width:750px; height:88px;background:#db6655;line-height:88px; }
+.chg-selectedlist-box-header-title{margin-left:76px;width:180px; height:88px; line-height:88px; text-align:left;font-size:36px; color:#ffffff;}
+
+.chg-shopdetail-comments-list{margin:20px auto;width:710px;  }
+		   .chg-shopdetail-comments-list ul{width:710px;}
+		   .chg-shopdetail-comments-list li{margin-bottom:20px;width:710px; border-bottom:1px solid #cccccc;}
+		   .chg-shopdetail-comments-list-person{width:70px;height:70px; border-radius:70px;}
+		   .chg-shopdetail-comments-list-content{width:601px; font-size:24px;}
+		   .chg-shopdetail-comments-list-content-title{width:601px; height:25px;text-align:left; }
+.chg-shopdetail-comments-list-content-main{margin-top:20px;width:601px; text-align:justify;}
+ /* 附近精选重合部分css结束  */
+ /* 首页CSS 重合部分开始  */
+ .chg-index-main-list{margin-top:10px; width:750px; height:210px; border-bottom:1px solid #e1e1e1;}
+.chg-index-main-list-img{margin-top:18px;margin-left:36px;width;173px; height:173px; border-radius:5px;}
+.chg-index-main-list-main ul{margin-top:18px;margin-left:36px;width;173px; height:173px; }
+.chg-index-main-list-main li{margin-top:20px;width;173px; height:27px; }
+.chg-index-main-list-main-title{font-size:32px; color:black;}
+.chg-index-main-list-main-title-size{font-size:28px; }
+.chg-index-main-list-main-title-color{font-size:28px; color:#ec5d50;}
+.chg-index-main-list-moods{margin-top:20px;font-size:24px; width:140px; height:27px; text-align:left;}
+.chg-index-main-list-moods span{color:#f9b61a;}
+ /* 首页CSS 重合部分结束  */
+  /*  增加css开始  */
+  .chg-recomshoplist-box{margin:20px auto;width:750px; background:#fff;}
+  .chg-recomshop-main-listadd{border-bottom:1px solid #fff;}
+  /*  增加css结束  */
+</style>
+
+
+</head>
+<body>
+  <!--   美食网友推荐开始 增加惰性加载 ie不兼容 -->
+   <div class="chg-selectedlist-box">
+      <div class="chg-selectedlist-box-header">
+       <div class="chg-selectedlist-box-header-title">|网友推荐</div>
+      </div>
+
+  <div class="chg-recomshoplist-box"> 
+    	  
+		   
+		   <!--  循环体开始  --> 
+    <div class="chg-shopdetail-comments-list">
+		     
+			 <ul>
+			  <li>
+			  <img class="chg-shopdetail-comments-list-person fl"
+               src="./img/zxy.jpg" alt="person"
+			  />
+			  <div class="chg-shopdetail-comments-list-content fr">
+			      <div class="chg-shopdetail-comments-list-content-title">
+			       优质小少年
+			      </div>
+				  <div class="chg-shopdetail-comments-list-content-main">
+			       制作工艺精良，服务态度超棒<br/>
+			      </div>
+
+			  </div>
+			  <div class="clear"></div>
+			
+			  </li>
+			</ul>
+    </div>
+	
+	<div class="chg-index-main-list chg-recomshop-main-listadd">
+					    <div class="chg-index-main-list-img fl">
+					      <a href=""><img class="img-load fl" src="" data-src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main fl">
+					      <ul>
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+	   </div>
+            <!--  循环体结束  -->
+	      <!--  循环体开始  --> 
+    <div class="chg-shopdetail-comments-list"> 
+			 <ul>
+			  <li>
+			  <img class="chg-shopdetail-comments-list-person fl"
+               src="./img/zxy.jpg" alt="person"
+			  />
+			  <div class="chg-shopdetail-comments-list-content fr">
+			      <div class="chg-shopdetail-comments-list-content-title">
+			       优质小少年
+			      </div>
+				  <div class="chg-shopdetail-comments-list-content-main">
+			       制作工艺精良，服务态度超棒<br/>
+			      </div>
+
+			  </div>
+			  <div class="clear"></div>
+			
+			 </li>
+		</ul>
+    </div>
+	
+	<div class="chg-index-main-list chg-recomshop-main-listadd">
+					    <div class="chg-index-main-list-img fl">
+					      <a href=""><img class="img-load fl" src="" data-src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main fl">
+					      <ul>
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+	   </div>
+            <!--  循环体结束  -->
+
+		    <!--  循环体开始  --> 
+    <div class="chg-shopdetail-comments-list"> 
+			 <ul>
+			  <li>
+			  <img class="chg-shopdetail-comments-list-person fl"
+               src="./img/zxy.jpg" alt="person"
+			  />
+			  <div class="chg-shopdetail-comments-list-content fr">
+			      <div class="chg-shopdetail-comments-list-content-title">
+			       优质小少年
+			      </div>
+				  <div class="chg-shopdetail-comments-list-content-main">
+			       制作工艺精良，服务态度超棒<br/>
+			      </div>
+
+			  </div>
+			  <div class="clear"></div>
+			
+			 </li>
+		</ul>
+    </div>
+	
+	<div class="chg-index-main-list chg-recomshop-main-listadd">
+					    <div class="chg-index-main-list-img fl">
+					      <a href=""><img class="img-load fl" src="" data-src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main fl">
+					      <ul>
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+	   </div>
+            <!--  循环体结束  -->
+			 <!--  循环体开始  --> 
+    <div class="chg-shopdetail-comments-list"> 
+			 <ul>
+			  <li>
+			  <img class="chg-shopdetail-comments-list-person fl"
+               src="./img/zxy.jpg" alt="person"
+			  />
+			  <div class="chg-shopdetail-comments-list-content fr">
+			      <div class="chg-shopdetail-comments-list-content-title">
+			       优质小少年
+			      </div>
+				  <div class="chg-shopdetail-comments-list-content-main">
+			       制作工艺精良，服务态度超棒<br/>
+			      </div>
+
+			  </div>
+			  <div class="clear"></div>
+			
+			 </li>
+		</ul>
+    </div>
+	
+	<div class="chg-index-main-list chg-recomshop-main-listadd">
+					    <div class="chg-index-main-list-img fl">
+					      <a href=""><img class="img-load fl" src="" data-src="./img/shopimg.png" alt="img" /></a>
+					    </div>
+						<div class="chg-index-main-list-main fl">
+					      <ul>
+						    <li class="chg-index-main-list-main-title">上海小南国</li>
+						    <li class="chg-index-main-list-main-title-size">世纪广场25km</li>
+							<li class="chg-index-main-list-main-title-color">￥235/人</li>
+							<li class="chg-index-main-list-main-title-size">营业时间：9:30-21:30</li>
+						  </ul>
+					    </div>
+						<div class="chg-index-main-list-moods fr">
+					         热度：<span>85℃</span>
+					    </div>
+	   </div>
+            <!--  循环体结束  -->
+		   
+	
+    </div> 
+	
+	
+	
+	
+	
+  <!--   美食港网友推荐结束  -->
+
+
+
+<script src="./js/img.js"></script>
+    <script>
+        SI.img({
+            fadeIn: function() {
+                this.style.opacity = 1;
+            }
+        })
+    </script>
+ 
+</body>
+
+</html>
+
+

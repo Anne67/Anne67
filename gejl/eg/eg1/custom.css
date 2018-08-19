@@ -1,0 +1,106 @@
+
+/*首页*/
+#tab1-title h2{
+    padding: 25px 0 15px 0;
+}
+
+
+#tab1 .media .media-heading{
+    padding-bottom: 15px;
+}
+
+.media {
+    padding: 20px;
+}
+
+
+
+/*资讯*/
+.info-tab1{
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 5px 5px 5px lightgray;
+    margin-bottom: 18px;
+}
+
+.info-tab1-right{
+    background-color: #fff;
+    box-shadow: 5px 5px 5px lightgray;
+    padding: 18px;
+}
+
+.info-tab1-right div{
+    margin-bottom: 10px;
+}
+
+
+
+/*Boostrap 无法完成的响应式布局,需要手动利用媒体查询来操作*/
+/*小于768px的屏幕*/
+@media screen and (max-width: 768px){
+    #tab1-title h2{
+        font-size: 20px;
+    }
+    #tab1-title p{
+        font-size: 14px;
+    }
+
+    #aboutDiv h3{
+        font-size: 18px;
+    }
+
+    #aboutDiv p{
+        font-size: 12px;
+    }
+}
+
+/*768~992px的屏幕*/
+@media screen and (min-width: 768px){
+    #tab1-title h2{
+        font-size: 24px;
+    }
+    #tab1-title p{
+        font-size: 16px;
+    }
+    #aboutDiv h3{
+        font-size: 19px;
+    }
+
+    #aboutDiv p{
+        font-size: 14px;
+    }
+}
+
+/*992~1200px的屏幕*/
+@media screen and (min-width: 992px){
+    #tab1-title h2{
+        font-size: 28px;
+    }
+    #tab1-title p{
+        font-size: 18px;
+    }
+    #aboutDiv h3{
+        font-size: 20px;
+    }
+
+    #aboutDiv p{
+        font-size: 15px;
+    }
+}
+
+/*大于1200px的屏幕*/
+@media screen and (min-width: 1200px){
+    #tab1-title h2{
+        font-size: 32px;
+    }
+    #tab1-title p{
+        font-size: 20px;
+    }
+    #aboutDiv h3{
+        font-size: 22px;
+    }
+
+    #aboutDiv p{
+        font-size: 16px;
+    }
+}

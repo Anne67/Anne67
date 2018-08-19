@@ -1,0 +1,27 @@
+a:link {}/* 未被访问的链接 */
+
+a:visited {}/* 已被访问的链接 */
+
+a:hover {}/* 鼠标指针移动到链接上 */
+
+a:active {}/* 正在被点击的链接 */
+/*公共*/
+body{background:#eee;font-family: 'Microsoft YaHei', arial, sans-serif}
+.pr24{padding-right: 24px;}
+.pr12{padding-right: 12px;}
+.common-head .header{width:100%;height:45px;background:#ec5d4f;}
+.common-head .header p{font-size: 17px;color:#fff;line-height: 45px;}
+.common-head .header p span{padding:0 10px;}
+
+/*个人中心主页样式开始*/
+.center .top{height:142px;position: relative;}
+.center .top i{position:absolute;right:15px;top:17px;font-size: 22px;}
+.center .top .head-img{width:76px;height:76px;margin:17px auto 15px;}
+.center .top p{text-align: center;font-size: 17px;margin-bottom: 20px;}
+.center .item{height:41px;border-top: 1px solid #dddddd;background:#fff;font-size: 15px;padding-top: 7px;}
+.center .item.first{margin-bottom: 11px;}
+.center .item.first a{width:49%;display:inline-block;text-align: center;}
+.center .item.first a i.pr24{color:#fece82;font-size: 20px;}
+.center .item a i.pr12{font-size:20px;}
+.center .item i.fr{font-size: 12px;}
+/*个人中心主页样式主页结束*/

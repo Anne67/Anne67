@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/row_number.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <!--<script src="../../../api/api.js?20171212"></script>-->
+</head>
+<style>
+
+</style>
+<body>
+<div class="container">
+    <div class="btn btn-primary show1">按钮点击显示</div>
+    <!--<div class="btn btn-primary cancel1">按钮点击取消</div>-->
+    <div class="rowNumberModial">
+        <div class="modial-top">
+            <p><b>排号</b></p>
+            <i class="iconfont icon-shanchu cancel2"></i>
+        </div>
+        <div class="modial-bottom">
+            <div class="modial-left">
+                <p>取号</p>
+                <div class="modial-print active"><i class="iconfont icon-flashzhijiedayin" style="font-size: 30px;margin-right: 40px;"></i> 打印</div>
+            </div>
+            <div class="modial-right">
+                <p>叫号</p>
+                <div class="modial-num active"><span></span>A13<i class="iconfont icon-shanchu cancel3" style="position: absolute;right:48px;cursor: pointer;font-size: 28px;"></i></div>
+                <div class="modial-num ">A14</div>
+                <div class="modial-num ">A15</div>
+                <div class="modial-num ">A16</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!--<script src="../dist/bootstrap.min.js"></script>-->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+//        $(function () {
+//            $chg = new chgApi();
+//            //调试
+//            var va =  $chg.getRowNumber();
+//
+//            console.log($chg.getRowNumber());
+//
+//        });
+
+
+            $.ajax({
+                url: "http://chg.zbr9x.com/cashier/Number/add_number",
+                async: false,
+                type: 'post',
+                data: {
+                    tel: 13252153712,
+                    num: 3
+                },
+                dataType: 'json',
+                error: function () {
+                    $return = false;
+                },
+                success: function (data) {
+                    console.log(data);
+                    $return = data;
+                }
+            });
+
+        $(".show1").click(function(){
+           $(".rowNumberModial").fadeIn(500);
+           $("body").css("background","#b2b2b2")
+        });
+        $(".cancel2").click(function(){
+            $(".rowNumberModial").fadeOut(300);
+            $("body").css("background","#fff")
+        })
+        $(".cancel3").click(function(){
+            $(".modial-right .active").fadeOut(300);
+//            $("body").css("background","#fff")
+        })
+    })
+</script>
+</body>
+</html>

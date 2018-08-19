@@ -1,0 +1,82 @@
+body{
+    /*background:#b2b2b2;*/
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 32px;
+}
+.rowNumberModial{
+    position:relative;
+    display:none;
+    width:876px;
+    height:536px;
+    background:#fff;
+    box-shadow: 0px 5px 10px #8c8b8b;
+    border-radius: 10px;
+}
+.rowNumberModial .modial-top{
+    position: relative;
+    height:80px;
+    background:#f2f2f2;
+    border-radius: 10px 10px 0 0 ;
+    border-bottom: 1px solid #dcdcdc;
+}
+.rowNumberModial .modial-top p{
+    position: relative;
+    padding-top:22px;
+    padding-bottom: 22px;
+    font-size: 36px;
+    text-align: center;
+}
+.rowNumberModial .modial-top i{
+    cursor:pointer;
+    position:absolute;
+    top:20px;
+    font-size: 36px;
+    right:40px;
+    z-index: 22;
+}
+.rowNumberModial .modial-bottom{
+
+}
+.rowNumberModial .modial-bottom p{
+    font-size: 32px;
+    text-align: center;
+    padding:12px;
+    margin-bottom: 12px;
+}
+.rowNumberModial .modial-bottom .modial-left{
+    width:428px;
+    height:454px;
+    float: left;
+    border-right:2px solid #f4f4f4;
+    text-align: center;
+}
+.rowNumberModial .modial-bottom .modial-right{
+    width:428px;
+    height:454px;
+    float: right;
+    border-left:2px solid #f4f4f4;
+}
+.rowNumberModial .modial-bottom .modial-print,
+.rowNumberModial .modial-bottom .modial-num
+{
+    width:366px;
+    height:80px;
+    padding:22px;
+    margin:124px auto;
+    border-radius: 6px;
+    text-align: center;
+}
+.rowNumberModial .modial-bottom .modial-num{
+    margin:14px auto;
+    background:#f2f2f2;
+}
+.rowNumberModial .modial-bottom .active{
+    background:#f66867;
+    color:#fff;
+}
+.bg{
+    background:#b2b2b2;
+}
+.modial-right .active{
+
+}

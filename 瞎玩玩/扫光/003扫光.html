@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		body{
+			background:#000;
+		}
+		.box{
+			width: 900px;
+			height:599px;
+			border:2px solid black;
+			margin:200px auto;
+			position:relative;
+			overflow: hidden;
+		}
+		img{
+			width: 900px;
+			height: 599px;
+		}
+		.box:before,
+		.box:after
+		{
+			content:"";
+			width:80px;
+			height:599px;
+			position:absolute;
+			top:0;
+			left:-400px;
+			background-image:linear-gradient(90deg,rgba(255,255,255,0) 10%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 90%);
+			 transform: skewX(-45deg);
+		}
+		.box:hover:before{
+			left:1300px;
+			transition:all 2s;
+		}
+		.box:hover:after{
+			left:1300px;
+			transition:all 2s 0.5s;
+		}
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+	<img src="1.jpg" alt="">
+</div>
+</body>
+</html>

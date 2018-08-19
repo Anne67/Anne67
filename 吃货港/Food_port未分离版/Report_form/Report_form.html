@@ -1,0 +1,446 @@
+<!Doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="iconfont.css">
+    <script src="./jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        *{margin:0;padding:0;}
+        .fl{float: left;}
+        body .report-form{font-size: 16px;}
+        .report-form .modal-content{border-radius: 15px;width:876px;}
+        .report-form .modal-header{background:#f2f2f2;height:80px;border-radius: 15px 15px 0 0;}
+        .report-form .modal-header h4{font-size: 34px;text-align: center;}
+        .report-form .modal-nav{height:50px;border-bottom: 1px solid #dcdcdc;padding:4px 0;}
+        .report-form .modal-nav input{height:40px;line-height: 40px;border-radius: 8px;outline-style: none;border:1px solid #dcdcdc;padding:10px 34px;width:150px;}
+        .report-form .modal-nav .total{display:inline-block;height:32px;padding-left: 30px;font-size: 20px;color:#f78281;vertical-align: middle;}
+        .report-form .modal-nav div{display:inline-block;}
+        .report-form .modal-nav div.pic{border:1px solid #f66867;width:211px;height:42px;float:right;margin-right: 31px;border-radius: 8px;cursor: pointer;}
+        .report-form .modal-nav div.pic .L-chart{border-radius: 8px 0 0 8px;}
+        .report-form .modal-nav div.pic .pie{border-radius: 0 8px 8px 0}
+        .report-form .modal-nav div.pic div{padding:8px 24px;font-size: 18px;}
+        .report-form .modal-nav div.pic div.active{background:#f66867;color:#fff;}
+        .report-form .modal-body{height:398px;padding:0;}
+        /*.modal-body div{float: left;}*/
+        .report-form .modal-body .body-left{width:458px;border-right:1px solid #f2f2f2;padding:16px 20px 10px 26px;height:398px;}
+        .modal-body .body-right{width:416px;padding:14px 20px;}
+        .report-form table,table tr th, table tr td { border:1px solid #dcdcdc; }
+        .report-form tr,th{height:42px;}
+        .report-form td,th{width:57px;text-align: center;}
+        .report-form th{width:56px;font-size: 14px;}
+        .report-form .body-right .educe{width:134px;height:32px;background:#f66867;font-size: 18px;color:#fff;position: absolute;text-align: center;line-height: 32px;border-radius: 8px;display:block;cursor: pointer;right:33px;bottom: 15px;}
+       
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 选择商户信息模态框（Modal） -->
+    <div class="modal report-form fade pbtn-modal share-to in" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog mt10">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="iconfont icon-shanchu cancel3" style="color:#000;font-size: 32px;"></i></span></button>
+                    <h4 class="modal-title">报表</h4>
+                </div>
+                <div class="modal-nav">
+                    <input type="" name="" value="12-11-2017">——<input type="" name="" value="12-11-2017"> 
+                    <span class="total">销售总额：￥2880</span> 
+                    <div class="pic">
+                        <div class="L-chart active">折线图</div>
+                        <div class="pie">饼状图</div>
+                    </div>  
+                </div>
+                <div class="modal-body">
+                    <div class="body-left fl">
+                        <p class="text-center ">支付类型清单</p>
+                        <form action="" style="height:346px;">
+                           <div>
+                               <table>
+                                    <tr>
+                                        <th>2017</th>
+                                        <th style="background:#9effb0">微信</th>
+                                        <th style="background:#f5ffa0">现金</th>
+                                        <th style="background:#6fddec">支付宝</th>
+                                        <th style="background:#f66867">会员卡</th>
+                                        <th style="background:#dcdcdc">银联</th>
+                                        <th style="background:#38495c;color:#ebecee;">营业额</th>
+                                    </tr>
+                               </table>
+                           </div>
+                                
+                             <div style="overflow-y: scroll;height:304px;">
+                                <table class="text-center"> 
+                                <tbody>
+                                    <tr>
+                                        <td>7/1</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr>
+                                     <tr>
+                                        <td>7/2</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr>
+                                     <tr>
+                                        <td>7/3</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr>
+                                     <tr>
+                                        <td>7/4</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr>
+                                     <tr>
+                                        <td>7/5</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr>
+                                     <tr>
+                                        <td>7/6</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr>
+                                     <tr>
+                                        <td>7/7</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr> 
+                                     <tr>
+                                        <td>7/8</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr>    
+                                     <tr>
+                                        <td>7/9</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr>    
+                                     <tr>
+                                        <td>7/10</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                        <td>720</td>
+                                        <td>2000</td>
+                                    </tr>                 
+                                </tbody>
+                            </table>
+                             </div>
+                        </form>
+                    </div>
+                    <div class="body-right fl">
+                         <!--<div id="main_Lchart" style="width: 396px;height:368px;"></div>-->
+                         <div id="main_pie" style="width:396px;height:368px;"></div>
+                         <a class="educe">导出excel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        <a data-toggle="modal" href="#cityModal" class="btn btn-primary btn-large">a标签打开模态框</a>
+        <!--<a href="javascript:;" id="open_modal" class="btn btn-primary btn-large">JS打开模态框</a>-->
+    </p>
+</div>
+<script src="echarts.common.min.js"></script>
+<script>
+    $(function () {
+//        $(".L-chart").click(function(){
+//            $(this).addClass("active");
+//            $(".pie").removeClass("active");
+//            $("#main_Lchart").css("display","block");
+//            $("#mainPie").css("display","none");
+//
+//        });
+//         $(".pie").click(function(){
+//            $(this).addClass("active");
+//            $(".L-chart").removeClass("active");
+//             alert("ajjaj");
+//            $("#mainPie").css("display","block");
+//             alert("sadas");
+//            $("#main_Lchart").css("display","none");
+//
+//        });
+
+//        var lineChart =function(){
+//            var mainLchart = echarts.init(document.getElementById('main_Lchart'));
+//            var option1 = {
+//                title: {
+//                    text: "支付类型"
+//                },
+//                tooltip: {
+//                    trigger: 'axis'
+//                },
+//                legend: {
+//                    data:['微信','现金','支付宝','会员卡','银联']
+//                },
+//                grid: {
+//                    top:"18%",
+//                    left: '1%',
+//                    right: '7%',
+//                    bottom: '12%',
+//                    containLabel: true
+//                },
+//                toolbox: {
+//                    feature: {
+//                        saveAsImage: {}
+//                    }
+//                },
+//                xAxis: {
+//                    type: 'category',
+//                    boundaryGap: false,
+//                    data: ['7/1','7/2','7/3','7/4','7/5','7/6','7/7']
+//                },
+//                yAxis: {
+//                    type: 'value'
+//                },
+//                series: [
+//                    {
+//                        name:'微信',
+//                        type:'line',
+//                        stack: '总额',
+//                        data:[254, 132, 354, 134, 287, 230, 210]
+//                    },
+//                    {
+//                        name:'现金',
+//                        type:'line',
+//                        stack: '总额',
+//                        data:[20, 152, 191, 234, 290, 24, 310]
+//                    },
+//                    {
+//                        name:'支付宝',
+//                        type:'line',
+//                        stack: '总额',
+//                        data:[150, 232, 201, 154, 190, 330, 410]
+//                    },
+//                    {
+//                        name:'会员卡',
+//                        type:'line',
+//                        stack: '总额',
+//                        data:[320, 332, 301, 334, 390, 330, 320]
+//                    },
+//                    {
+//                        name:'银联',
+//                        type:'line',
+//                        stack: '总额',
+//                        data:[820, 932, 901, 934, 436,654, 478]
+//                    }
+//                ]
+//            };
+//            mainLchart.setOption(option1);
+////        };
+
+//        var pieChart = function(){
+            var mainPie = echarts.init(document.getElementById('main_pie'));
+            var  option2 = {
+                title : {
+                    text: '支付类型统计图',
+                    subtext: '百分比例',
+                    x:'center'
+                },
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['微信','现金','支付宝','会员卡','银联']
+                },
+                series : [
+                    {
+                        name: '支付来源',
+                        type: 'pie',
+                        radius : '55%',
+                        center: ['50%', '55%'],
+                        data:[
+                            {value:335, name:'微信'},
+                            {value:310, name:'现金'},
+                            {value:234, name:'支付宝'},
+                            {value:135, name:'会员卡'},
+                            {value:1548, name:'银联'}
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            };
+            mainPie.setOption(option2);
+//        };
+
+        /*
+         * 通过js弹出模态框
+         */
+        $('#open_modal').click(function () {
+            $('#cityModal').modal();
+        });
+    });
+</script>
+<script>
+
+    var pieChart=function(){
+        var mainLchart = echarts.init(document.getElementById('main_Lchart'));
+        var option1 = {
+            title: {
+                text: "支付类型"
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['微信','现金','支付宝','会员卡','银联']
+            },
+            grid: {
+                top:"18%",
+                left: '1%',
+                right: '7%',
+                bottom: '12%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['7/1','7/2','7/3','7/4','7/5','7/6','7/7']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name:'微信',
+                    type:'line',
+                    stack: '总额',
+                    data:[254, 132, 354, 134, 287, 230, 210]
+                },
+                {
+                    name:'现金',
+                    type:'line',
+                    stack: '总额',
+                    data:[20, 152, 191, 234, 290, 24, 310]
+                },
+                {
+                    name:'支付宝',
+                    type:'line',
+                    stack: '总额',
+                    data:[150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name:'会员卡',
+                    type:'line',
+                    stack: '总额',
+                    data:[320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name:'银联',
+                    type:'line',
+                    stack: '总额',
+                    data:[820, 932, 901, 934, 436,654, 478]
+                }
+            ]
+        };
+        mainLchart.setOption(option1);
+    };
+
+    var lineChart = function(){
+           var mainPie = echarts.init(document.getElementById('main_pie'));
+           var  option2 = {
+               title : {
+                   text: '支付类型统计图',
+                   subtext: '百分比例',
+                   x:'center'
+               },
+               tooltip : {
+                   trigger: 'item',
+                   formatter: "{a} <br/>{b} : {c} ({d}%)"
+               },
+               legend: {
+                   orient: 'vertical',
+                   left: 'left',
+                   data: ['微信','现金','支付宝','会员卡','银联']
+               },
+               series : [
+                   {
+                       name: '支付来源',
+                       type: 'pie',
+                       radius : '55%',
+                       center: ['50%', '55%'],
+                       data:[
+                           {value:335, name:'微信'},
+                           {value:310, name:'现金'},
+                           {value:234, name:'支付宝'},
+                           {value:135, name:'会员卡'},
+                           {value:1548, name:'银联'}
+                       ],
+                       itemStyle: {
+                           emphasis: {
+                               shadowBlur: 10,
+                               shadowOffsetX: 0,
+                               shadowColor: 'rgba(0, 0, 0, 0.5)'
+                           }
+                       }
+                   }
+               ]
+           };
+           mainPie.setOption(option2);
+       }
+
+
+</script>
+
+
+</body>
+</html>

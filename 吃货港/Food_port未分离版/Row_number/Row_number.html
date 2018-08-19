@@ -1,0 +1,106 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>无标题文档</title>
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="iconfont.css"/>
+        <script src="./jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        .f34{font-size: 34px;}
+        .f28{font-size: 28px;}
+        .f24{font-size: 24px;}
+        .row-number .modal-content{width:876px;border-radius: 15px;}
+        .row-number .modal-header{height:80px;background:#f2f2f2;border-radius: 15px;}
+        .row-number .modal-header h4{height:49px;line-height: 49px;}
+        .row-number .modal-header .iconfont{position: absolute;top:24px;right:44px;}
+        .row-number .modal-body{padding:0;height:454px;}
+        .row-number .modal-body p{
+            font-size: 32px;
+            text-align: center;
+            padding:12px;
+            margin-bottom: 12px;
+        }
+        .row-number .modal-body .modial-left,
+        .row-number .modal-body .modial-right{
+            width:428px;
+            height:454px;
+        }
+        .row-number .modal-body .modial-left{
+            float: left;
+            border-right:2px solid #f4f4f4;
+            text-align: center;
+        }
+        .row-number .modal-body .modial-right{
+            float: right;
+            border-left:2px solid #f4f4f4;
+        }
+        .row-number .modal-body .modial-print,
+        .row-number .modal-body .modial-num
+        {
+            width:366px;
+            height:80px;
+            padding:22px;
+            margin:124px auto;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .row-number .modal-body .modial-num{
+            margin:14px auto;
+            background:#f2f2f2;
+        }
+        .row-number .modal-body .active{
+            background:#f66867;
+            color:#fff;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+
+            <!-- 选择商户信息模态框（Modal） -->
+            <div class="modal row-number fade pbtn-modal share-to in" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog mt10">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-shanchu f34"></i></button>
+                            <h4 class="modal-title text-center f34">排号</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modial-left">
+                                <p>取号</p>
+                                <div class="modial-print active f28"><i class="iconfont icon-flashzhijiedayin" style="font-size: 30px;margin-right: 40px;"></i> 打印</div>
+                            </div>
+                            <div class="modial-right f24">
+                                <p style="padding-bottom: 8px;">叫号</p>
+                                <div class="modial-num active"><span></span>A13<i class="iconfont icon-shanchu cancel3" style="position: absolute;right:48px;cursor: pointer;font-size: 28px;"></i></div>
+                                <div class="modial-num ">A14</div>
+                                <div class="modial-num ">A15</div>
+                                <div class="modial-num ">A16</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                <a data-toggle="modal" href="#cityModal" class="btn btn-primary btn-large">a标签打开模态框</a>
+                <!--<a href="javascript:;" id="open_modal" class="btn btn-primary btn-large">JS打开模态框</a>-->
+            </p>
+        </div>
+        <script>
+            $(function () {
+                /*
+                 * 通过js弹出模态框
+                 */
+                $('#open_modal').click(function () {
+                    $('#cityModal').modal();
+                });
+            });
+        </script>
+
+    </body>
+</html>

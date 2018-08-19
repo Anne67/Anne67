@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>推荐餐厅</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- 引入   bootstrapcss  引入公共css -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/user.css"/>
+    <!--引入iconFont-->
+    <link rel="stylesheet" href="css/iconfont.css"/>
+    <!--引入上传图片样式-->
+    <link href="css/upPhoto/common.css" type="text/css" rel="stylesheet"/>
+    <link href="css/upPhoto/index.css" type="text/css" rel="stylesheet"/>
+    <style>
+        .recommend .main{margin-top:13px;}
+        .recommend .item{background:#fff;padding:0 15px;}
+        .recommend .item input{float: right;outline-style: none;border:none;text-align: right}
+        .recommend .item .bb1{border-bottom: 1px solid #ddd;padding:12px 15px;line-height: 15px;font-size: 15px;}
+        .recommend .item-bottom{padding:15px 15px;}
+        .recommend .item-bottom .photo{width:106px;height:106px;background:#eee;}
+        .recommend .btn-bottom{background:#ec5d4f;height:43px;line-height: 29px;color:white;font-size: 17px;border-radius: 5px;margin-top: 40px;}
+        .img-box .upimg-div .z_file {
+            width: 100px;
+            height: 100px;
+        }
+
+        .z_file .add-img {
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+
+        .img-box {
+             margin-top: 0;
+        }
+
+        .z_photo {
+             padding: 15px;
+            border:none;
+        }
+        .upimg-div .up-section {
+            width: 98px;
+            height: 98px;
+        }
+        .recommend .full {
+             width: 100%;
+            min-width: 100%;
+            /* margin: 0 auto; */
+        }
+        .up-img{
+            border-radius: 5px;
+        }
+        .recommend .item {
+            background: #fff;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="container recommend">
+    <div class="row">
+        <div class="main">
+            <div class="item">
+                <div class="col-xs-12 bb1">
+                    餐厅名称
+                    <input type="text" placeholder="请输入餐厅名称" />
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-xs-12 bb1">
+                    餐厅地址
+                    <input type="text" placeholder="请输入餐厅地址" />
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-xs-12 bb1">
+                    用户电话
+                    <input type="text" placeholder="请输入您的电话号码" />
+                </div>
+            </div>
+            <div class="item item-bottom" >
+                <div class="">
+                    <div class="img-box full ">
+                        <section class=" img-section">
+                            <!--<p class="up-p">图片：<span class="up-span">最多可以上传5张图片，马上上传</span></p>-->
+                            <div class="z_photo upimg-div clear" >
+                                <!--<section class="up-section fl">
+                                     <span class="up-span"></span>
+                                     <img src="/img/buyerCenter/a7.png" class="close-upimg">
+                                     <img src="/img/buyerCenter/3c.png" class="type-upimg" alt="添加标签">
+                                     <img src="/img/test2.jpg" class="up-img">
+                                     <p class="img-namep"></p>
+                                     <input id="taglocation" name="taglocation" value="" type="hidden">
+                                     <input id="tags" name="tags" value="" type="hidden">
+                                 </section>-->
+                                <section class="z_file fl">
+                                    <img src="img/a11.png" class="add-img">
+                                    <input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple />
+                                </section>
+                            </div>
+                        </section>
+                    </div>
+                    <aside class="mask works-mask">
+                        <div class="mask-content">
+                            <p class="del-p ">您确定要删除该张图片吗？</p>
+                            <p class="check-p"><span class="del-com wsdel-ok">确定</span><span class="wsdel-no">取消</span></p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn btn-bottom col-xs-12">提交</div>
+
+
+</div>
+
+<!-- 引入  jquery bootstrap  js -->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!--引入上传图片js-->
+<script src="js/upPhoto/jquery.js"></script>
+<script src="js/upPhoto/imgUp.js"></script>
+</body>
+
+</html>
+
+
+

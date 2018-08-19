@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>订单详情</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 引入   bootstrapcss  引入公共css -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/common.css" rel="stylesheet" type="text/css">
+    <!-- 引入  jquery bootstrap  js -->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <!--设置不缓存-->
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <!--设置不缓存-->
+    <style>
+        body{background:#eee;}
+        .order-detail .col-red{color:#db6655;}
+        .order-detail .pb0{color:#999;}
+        .order-detail .f14{font-size: 14px;}
+
+        /*头部菜品样式*/
+        .order-detail .top-detail{margin-top: 16px;background:#fff;}
+        .order-detail .items{background:#fff;}
+        .order-detail .top-detail .item.title{height:43px;padding:15px 0; font-size: 13px;}
+        .order-detail .top-detail .item{height:65px;border-bottom:1px solid #ddd;padding:10px 0;}
+        .order-detail .top-detail .spread{height:45px;width:100%;border-top:1px solid #ddd;float:left;padding:10px 0;background: #fff;text-align: center;position: relative;bottom:1px;}
+        .order-detail .top-detail .spread .btn{background:#fff;border:1px solid #ddd;height:25px;line-height: 10px;font-size: 10px;}
+        .order-detail .top-detail .item .photo{height:45px;width:45px;background:#eee;border-radius: 5px;}
+        .order-detail .top-detail .item .photo img{height:45px;width:45px;}
+        .order-detail .top-detail .item .col-xs-2{padding:0;}
+        .order-detail .top-detail .item .greens{height:45px;line-height: 45px;}
+        .order-detail .top-detail .item .cash{padding:0;}
+        .order-detail .top-detail .items-open{display:none}
+
+        /*头部付款金额样式*/
+        .order-detail .middle-detail{margin-top: 10px;background-color: #fff;}
+        .order-detail .middle-detail .items .h44{height:44px;line-height:44px;font-size: 14px;}
+        .order-detail .middle-detail .item{height:60px;border-bottom:1px solid #ddd;}
+        .order-detail .middle-detail .middle {padding-top: 15px;padding-bottom: 15px;font-size: 11px;}
+
+        /*尾部状态评论样式*/
+        .order-detail .bot-detail {margin-top: 10px;background:#fff;}
+        .order-detail .bot-detail .main{height:100px;background:#fff;padding:15px;}
+        .order-detail .bot-detail p{margin-bottom: 3px;}
+        .order-detail .bot-detail .discuss{position: absolute;width:75px;background:#db6655;color:#fff;bottom:10px;right:15px;}
+
+
+
+    </style>
+</head>
+<body>
+<div class="container order-detail">
+    <!--头部菜品开始-->
+   <div class="top-detail">
+      <div class="row">
+          <!--未展开开始-->
+          <div class="items col-xs-12 items-close">
+              <div class="col-xs-12 item title">
+                  梁氏自助火锅（共3件商品）
+              </div>
+              <div class="col-xs-12 item">
+                  <div class="col-xs-2 photo">
+                      <img src="images/dish.png" class="img img-rounded" alt=""/>
+                  </div>
+                  <div class="col-xs-7 greens">木耳炒肉</div>
+                  <div class="col-xs-3 cash">
+                      <p class="text-right">￥20.00</p>
+                      <p class="text-right pb0">X 1</p>
+                  </div>
+              </div>
+              <div class="col-xs-12 item">
+                  <div class="col-xs-2 photo">
+                      <img src="images/dish.png" class="img img-rounded" alt=""/>
+                  </div>
+                  <div class="col-xs-7 greens">木耳炒肉</div>
+                  <div class="col-xs-3 cash">
+                      <p class="text-right">￥20.00</p>
+                      <p class="text-right pb0">X 1</p>
+                  </div>
+              </div>
+              <div class="col-xs-12 item">
+                  <div class="col-xs-2 photo">
+                      <img src="images/dish.png" class="img img-rounded" alt=""/>
+                  </div>
+                  <div class="col-xs-7 greens">木耳炒肉</div>
+                  <div class="col-xs-3 cash">
+                      <p class="text-right">￥20.00</p>
+                      <p class="text-right pb0">X 1</p>
+                  </div>
+              </div>
+          </div>
+          <!--未展开结束-->
+          <!--展开开始-->
+          <div class="items col-xs-12 items-open">
+              <div class="col-xs-12 item">
+                  <div class="col-xs-2 photo">
+                      <img src="images/dish.png" class="img img-rounded" alt=""/>
+                  </div>
+                  <div class="col-xs-7 greens">木耳炒肉</div>
+                  <div class="col-xs-3 cash">
+                      <p class="text-right">￥20.00</p>
+                      <p class="text-right pb0">X 1</p>
+                  </div>
+              </div>
+              <div class="col-xs-12 item">
+                  <div class="col-xs-2 photo">
+                      <img src="images/dish.png" class="img img-rounded" alt=""/>
+                  </div>
+                  <div class="col-xs-7 greens">木耳炒肉</div>
+                  <div class="col-xs-3 cash">
+                      <p class="text-right">￥20.00</p>
+                      <p class="text-right pb0">X 1</p>
+                  </div>
+              </div>
+              <div class="col-xs-12 item">
+                  <div class="col-xs-2 photo">
+                      <img src="images/dish.png" class="img img-rounded" alt=""/>
+                  </div>
+                  <div class="col-xs-7 greens">木耳炒肉</div>
+                  <div class="col-xs-3 cash">
+                      <p class="text-right">￥20.00</p>
+                      <p class="text-right pb0">X 1</p>
+                  </div>
+              </div>
+          </div>
+          <!--展开结束-->
+          <div class="spread">
+              <button class="btn btn-spread">点击展开</button>
+          </div>
+
+      </div>
+   </div>
+    <!--头部菜品结束-->
+
+    <!--中间付款金额开始-->
+   <div class="middle-detail">
+       <div class="row">
+           <div class="items">
+               <div class="item h44">
+                   <div class="col-xs-12">
+                       订单总额
+                       <span class="fr"><b>￥60.00</b></span>
+                   </div>
+               </div>
+               <div class="item middle">
+                   <div class="col-xs-12">
+                       <p>
+                           <span class="pb0">全场优惠券</span>
+                           <span class="fr col-red">-￥20.00</span>
+                       </p>
+                       <p>
+                           <span class="pb0">满60减5</span>
+                           <span class="fr col-red">-￥5.00</span>
+                       </p>
+                   </div>
+               </div>
+               <div class="item h44">
+                  <div class="col-xs-12">
+                      实付款
+                      <span class="fr"><b>￥35.00</b></span>
+                  </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+    <!--中间付款金额结束-->
+
+    <!--尾部状态评论开始-->
+   <div class="bot-detail">
+       <div class="row">
+           <div class="main col-xs-12 f14">
+               <p>订单编号：123456789</p>
+               <p>下单时间：2017-01-08</p>
+               <p>订单状态：<span class="col-red">已完成</span></p>
+               <div class="btn discuss">评论</div>
+           </div>
+       </div>
+   </div>
+    <!--尾部状态评论结束-->
+
+
+</div>
+
+<script>
+    $(".btn-spread").click(function(){
+        $(".items-open").slideToggle("slow");
+    });
+</script>
+</body>
+</html>
