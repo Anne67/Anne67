@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>魔方选择</title>
+	<meta name='Keywords' content='关键字'>
+	<meta name='Description' content='描述'>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		#wrap{width:100%;}
+		#wrap .shower{width:270px; height:500px; position:relative; top:20px;left:10px; float:left;}
+		#wrap .shower img{box-shadow: -4px 0px 15px #000;}
+		#wrap .recommend{width:930px; border:4px solid #ccc; float:right; margin-top:20px; padding:15px;}
+		#wrap .recommend .recommend_hd{height:34px; line-height: 34px; padding-left: 15px; border-top: 2px solid #c9c2e6;border-bottom: 2px solid #ccc; font-weight: 600; color:#646464;}
+		#wrap .recommend .recommend_bt li{list-style: none; width:160px; height:246px; border:1px solid #cccccc; float:left; overflow: hidden; margin:10px; position:relative; cursor:pointer;}
+		#wrap .recommend .recommend_bt li img{padding:10px; width:140px;}
+		#wrap .recommend .recommend_bt li .title{height:34px; line-height: 34px; width:160px; background: rgba(0,0,0,.5);text-align: center; color:#FFFFFF; font-size: 12px; position:absolute; bottom:-34px; }
+		#wrap .recommend .recommend_bt li:hover .title{bottom:0px; transition: all 600ms;}
+	
+	</style>
+	<script type="text/javascript">
+	/*window.onload=function(){
+		var Img = document.getElementsByTagName('img')
+		for(var i=0;i<Img.length;i++){
+			Img[i].onclick=function(sender){
+
+				if(!sender.src.match(/.jpg|.gif|.png|.bmp/i)){
+					alert("图片错误！");
+					return false;
+				}
+				var obj = documnet.getElementById('preview');
+				obj.src = sender.src;
+			}
+		}
+	}
+			*/
+			function onck(sender){
+		if(!sender.src.match(/.jpg|.gif|.png|.bmp/i))
+		{
+			alert("图片错误！");
+			return false;
+		}
+		var obj = document.getElementById("preview");
+		obj.src=sender.src;
+	}
+	
+	</script>
+</head>
+<body>
+	<div id='wrap'>
+		<!-- 左边 -->
+		<div class='shower'>
+			<img src="img/1.jpg" width='270px;'  id='preview'>
+		</div>
+		<!-- 左边end -->
+		<!-- 右边 -->
+		<div class='recommend'>
+			<div class='recommend_hd'>人气选择</div>
+			<div class='recommend_bt'>
+				<ul>
+					<li>
+						<img src="img/1.jpg" onClick="onck(this)">
+						<p class='title'>点击一下有惊喜哦！</p>
+					</li>
+					<li>
+						<img src="img/2.jpg" onClick="onck(this)">
+						<p class='title'>点击一下有惊喜哦！</p>
+					</li>
+					<li>
+						<img src="img/3.jpg" onClick="onck(this)">
+						<p class='title'>点击一下有惊喜哦！</p>
+					</li>
+					<li>
+						<img src="img/4.jpg" onClick="onck(this)">
+						<p class='title'>点击一下有惊喜哦！</p>
+					</li>
+					<li>
+						<img src="img/5.jpg" onClick="onck(this)">
+						<p class='title'>点击一下有惊喜哦！</p>
+					</li>
+					<li>
+						<img src="img/6.jpg" onClick="onck(this)">
+						<p class='title'>点击一下有惊喜哦！</p>
+					</li>
+					<li>
+						<img src="img/7.jpg" onClick="onck(this)">
+						<p class='title'>点击一下有惊喜哦！</p>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<!-- 右边end -->
+	</div>
+
+</body>
+</html>

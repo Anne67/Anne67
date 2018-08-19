@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- 申明当前页面的三要素 -->
+	<title>模仿灵犀老师的干货</title>
+	<meta name='Keywords' content='动画,过滤,html5,css3'>
+	<meta name='Description' content='电影,描述'>
+	<!-- css样式开始 -->
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		.box{width:100%;height:630px;background:url('img/bg.png'); margin:20px auto;}
+		.box .show{width:940px; height:610px; margin: 0px auto;}
+		.box .show li{width:235px; height:610px; float:left; list-style: none; opacity:0.5; position: relative; transition: all 1s;}
+		.box .show li:hover{opacity:1;}
+		.box .show li:nth-child(1){background: url('img/1.jpg');}
+		.box .show li:nth-child(2){background: url('img/2.jpg');}
+		.box .show li:nth-child(3){background: url('img/3.jpg');}
+		.box .show li:nth-child(4){background: url('img/4.jpg');}
+		.box .show li .info{width:200px; height:135px; background:rgba(0,0,0,.5); color:#fff; text-align: center; position: absolute; bottom:30px; left:18px;}
+		.box .show li .info h2{line-height: 60px; font-size: 20px; font-weight: 600; font-family: '微软雅黑'; border-bottom: 1px solid #fff;}
+		.box .show li .info p{font-size: 12px; margin:5px;}
+		.box .show li .info .detail{width:200px; height:135px; background: #E7E7E7; box-shadow: 0 0 10px #fff; position:absolute; bottom:-135px; left:0; opacity: 0; transition: all 1s;}
+		.box .show li:hover .info .detail{opacity: 1; bottom:0px;}
+		.box .show li:hover .info .detail p{margin:0; color:#333;}
+		.box .show li:hover .info .detail p:nth-child(1){line-height: 35px;font-size: 14px; border-bottom: 1px solid #d3d3d3;}
+		.box .show li:hover .info .detail p:nth-child(2),.box .show li:hover .info .detail p:nth-child(3){padding:7px;}
+		.box .show li:hover .info .detail p:nth-child(4){color:blue; margin-top: 15px;}
+
+
+		
+	</style>
+</head>
+<body>
+	<div class='box'>
+		<div class='show'>
+			<ul>
+				<li>
+					<div class='info'>
+						<h2>《一夜惊喜》</h2>
+						<p>2015年4月15日</p>
+						<p>范冰冰与萌男的性感喜剧</p>
+						<div class='detail'>
+							<p>女神一夜情谜风流孕事</p>
+							<p>导演：金沂蒙</p>
+							<p>主演：范冰冰/李治廷/蒋劲夫</p>
+							<p>1275人想看</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class='info'>
+						<h2>《一夜惊喜》</h2>
+						<p>2015年4月15日</p>
+						<p>范冰冰与萌男的性感喜剧</p>
+						<div class='detail'>
+							<p>女神一夜情谜风流孕事</p>
+							<p>导演：金沂蒙</p>
+							<p>主演：范冰冰/李治廷/蒋劲夫</p>
+							<p>1275人想看</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class='info'>
+						<h2>《一夜惊喜》</h2>
+						<p>2015年4月15日</p>
+						<p>范冰冰与萌男的性感喜剧</p>
+						<div class='detail'>
+							<p>女神一夜情谜风流孕事</p>
+							<p>导演：金沂蒙</p>
+							<p>主演：范冰冰/李治廷/蒋劲夫</p>
+							<p>1275人想看</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class='info'>
+						<h2>《一夜惊喜》</h2>
+						<p>2015年4月15日</p>
+						<p>范冰冰与萌男的性感喜剧</p>
+						<div class='detail'>
+							<p>女神一夜情谜风流孕事</p>
+							<p>导演：金沂蒙</p>
+							<p>主演：范冰冰/李治廷/蒋劲夫</p>
+							<p>1275人想看</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

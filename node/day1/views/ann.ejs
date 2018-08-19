@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../assets/ann.css">
+</head>
+<body>
+
+<!--引入公共导航模版-->
+<% include ../public/nav.ejs%>
+
+<h1>今天的网真是垃圾....<%=webname%></h1>
+<h2>个人介绍</h2>
+    <ul>
+        <% data.forEach(function(item){%>
+            <li><%=item.age%> </li>
+        <%item.name.forEach(function(item){%>
+            <li><%=item%></li>
+        <%})%>
+        <%})%>
+    </ul>
+</body>
+</html>

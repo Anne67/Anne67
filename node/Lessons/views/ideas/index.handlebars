@@ -1,0 +1,13 @@
+{{#each items}}
+    <div class="card card-body md-2">
+        <h4>标题:{{title}}</h4>
+        <p>详情:{{details}}</p>
+        <a href="/ideas/edit/{{id}}" class="btn btn-dark ">编辑</a>
+
+        <form action="/ideas/{{id}}?_method=DELETE" method="post">
+            <input type="hidden" name="method" value="DELETE">
+            <input type="submit" class="btn btn-danger btn-block" value="删除">
+        </form>
+    </div>
+
+{{/each}}

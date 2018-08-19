@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Lessons/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/config/passport.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/helpers/auth.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/routes/ideas.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/routes/users.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/about.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/ideas/add.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/ideas/edit.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/ideas/index.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/index.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/partials/_errors.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/partials/_msg.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/partials/_navbar.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/users/login.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lessons/views/users/register.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NodeServe/routes/api/users.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ToDoApp/controller/todoController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day1/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/example/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/example/views/about.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/example/views/active.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/example/views/advice/advice.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/example/views/advice/index.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/example/views/index.handlebars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/example/views/partials/_navbar.handlebars" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

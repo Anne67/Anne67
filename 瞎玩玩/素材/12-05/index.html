@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!--声明当前页面的编码格式 UTF-8（国际编码）gbk(中文简体)-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!--声明当前页面的三要素-->
+	<title>标题</title>
+	<meta name="Keywords" content="关键字">
+	<meta name="Description" content="描述">
+  <!--样式 css 变漂亮 衣柜-->
+  <style type="text/css">
+		*{margin:0px; padding:0px;}
+		#warp{width:100%; min-width:1280px;}
+		#warp .shower{width:270px; height:500px; position:relative; top:20px; left:10px; float:left;}
+		#warp .shower img{box-shadow:-1px -2px 15px #000000;}
+		#warp .recommend{ width:930px; padding:15px; border:1px solid #cccccc; float:right; margin-top:20px;}
+		#warp .recommend .recommend_hd{height:34px; line-height:34px; padding-left:15px; border-top:2px solid #c9c2e6; border-bottom:1px solid #cccccc; font-weight:600; color:#646464;}
+		#warp .recommend  .recommend_bd li{list-style:none; width:160px; height:246px; border:1px solid #cccccc; float:left; margin:10px; cursor:pointer; position:relative; overflow:hidden;}
+		#warp .recommend  .recommend_bd li img{padding:10px;}
+		#warp .recommend  .recommend_bd li .title{height:34px; width:160px;  line-height:34px; background:rgba(0,0,0,0.5); text-align:center; color:#FFFFFF; font-size:12px; position:absolute; bottom:-34px;}
+		#warp .recommend  .recommend_bd li:hover .title{bottom:0px; transition:all 600ms;}
+  </style>
+  <!-- js-->
+<script type="text/javascript">
+	function onck(sender){
+		if(!sender.src.match(/.jpg|.gif|.png|.bmp/i))
+		{
+			alert("图片错误！");
+			return false;
+		}
+		var obj = document.getElementById("preview");
+		obj.src=sender.src;
+	}
+</script>
+ </head>
+ <body>
+	<div id="warp">
+		<!-- 左-->
+			<div class="shower">
+				<img  src="img/1.jpg" width="270px" id="preview"/>
+			</div>
+		<!-- 左end-->
+		<!-- 右-->
+			<div class="recommend">
+				<div class="recommend_hd">人气选择</div>
+				<div class="recommend_bd">
+					<ul>
+						<li><img  src="img/1.jpg" width="140px" onClick="onck(this)"/>
+						<p class="title"> 点击一下，有惊喜哦！</p>
+						</li>
+						<li><img  src="img/2.jpg" width="140px" onClick="onck(this)"/>
+						<p class="title"> 点击一下，有惊喜哦！</p>
+						</li>
+						<li><img  src="img/3.jpg" width="140px" onClick="onck(this)"/>
+						<p class="title"> 点击一下，有惊喜哦！</p>
+						</li>
+						<li><img  src="img/4.jpg" width="140px" onClick="onck(this)"/>
+						<p class="title"> 点击一下，有惊喜哦！</p>
+						</li>
+						<li><img  src="img/5.jpg" width="140px" onClick="onck(this)"/>
+						<p class="title"> 点击一下，有惊喜哦！</p>
+						</li>
+						<li><img  src="img/6.jpg" width="140px" onClick="onck(this)"/>
+						<p class="title"> 点击一下，有惊喜哦！</p>
+						</li>
+						<li><img  src="img/7.jpg" width="140px" onClick="onck(this)"/>
+						<p class="title"> 点击一下，有惊喜哦！</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		<!--右end-->
+	</div>
+ </body>
+</html>
